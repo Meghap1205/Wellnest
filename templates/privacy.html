@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+    <title>Privacy Policy</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/privacy-style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="c1 container">
+        <div class="row">
+            <div class="col-1 col-xl-2 col-lg-3 col-md-3 col-sm-3"><br><br>
+                <div class="r1">
+                    <h6 class="pol1"><u>ABOUT US</u></h6>
+                    <p>
+                        <a href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                    <h6 class="pol1"><u>POLICIES</u></h6>
+                    <p>
+                        <a href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                    <h6 class="pol1"><u>CONTACT</u></h6>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-11 col-xl-10 col-lg-9 col-md-9 col-sm-9"><br>
+                <h3 class="pol2">WELLnest Privacy Policy</h3><hr>
+                <p class="p1">
+                    WELLnest understands how important the privacy of personal information is to our users. This Privacy
+                    Policy will tell you what information we collect about you and about your use of WELLnest and its
+                    services. It will explain the choices you have about how your personal information is used and how
+                    we protect that information. We urge you to read this Privacy Policy carefully. <br><br>
+                    This Privacy Policy applies to websites owned and operated by WELLnest that are intended for use by
+                    consumers (non-professionals) for non-commercial personal, family or household purposes, including
+                    WELLnest.com, MedicineNet.com, RxList.com, OnHealth.com, and eMedicineHealth.com and including the
+                    mobile optimized versions of these sites and our Mobile Device Applications or "Apps" (we refer to
+                    these sites and Apps collectively as the “WELLnest Sites”). We refer to the WELLnest Sites and Apps,
+                    along with the information and services made available to you through the WELLnest Sites and Apps,
+                    as the “Services.”<br><br>
+                    This Privacy Policy also applies to the consumer-facing version of the WELLnest Health Manager
+                    Product. However, if you are an employee or health plan member who has enabled access to your health
+                    record at WELLnest.com by registering at your employer's or health plan's website, the privacy
+                    policy applicable to your information at your employer's or health plan's website remains applicable
+                    to your personal health record at WELLnest.com. If your employer or health plan account is no longer
+                    made available to you by your employer or health plan, you will continue to have access to your
+                    health information from WELLnest.com, using the same username and password, but will be subject to
+                    this Privacy Policy. <br><br>
+                </p><br>
+                <img src="../static/image folder/privacyimg1.jpg" class="img-fluid" alt="img" style="border: 1px solid black; border-radius: 7px;"><br><br>
+                <h4 class="pol3"><u>Information Collected About You</u></h4><br>
+                <p class="p1">
+                    Some of our Services (such as certain quizzes or calculators) do not retain your personal
+                    information, while others (such as WELLnest Lab Testing and the Ovulation/Pregnancy Calendar and the
+                    Healthy Target Program in the WELLnest App and certain of our registration-only Apps like WELLnest
+                    Baby,
+                    WELLnest Pregnancy and WELLnest Allergy) store your personal information in accordance with this
+                    Privacy
+                    Policy. Even if you do not register with or provide any personal information to WELLnest, we collect
+                    information about your use of the WebMD Sites and Apps and the Services. We may also acquire
+                    information about our users from external sources.
+                </p>
+                <h4 class="pol3"><u>How Information Collected About You Is Used</u></h4>
+                <p class="p1">
+                    Information about your use of the Services may be used for the following purposes:
+                <ul>
+                    <li class="ul">to provide, improve and create new Services,</li>
+                    <li class="ul">to respond to your inquiries and to send you administrative communications about the
+                        WELLnest
+                        Sites
+                        and Services,</li>
+                    <li class="ul">to obtain your feedback about the WELLnest Sites and Services,</li>
+                    <li class="ul">to send you secure electronic messages and personalized emails pertaining to your
+                        interests as
+                        inferred from your use of the Services, including news, announcements, reminders and
+                        opportunities from WELLnest,</li>
+                    <li class="ul">to statistically analyze trends and user behavior and activity including how
+                        frequently areas of
+                        the WELLnest Sites are visited, how the Services are being used and how many emails are received
+                        and opened,</li>
+                    <li class="ul">to provide you and people with similar demographic characteristics and interests with
+                        more
+                        relevant content including advertising both on and off the WebMD Sites and Apps,</li>
+                    <li class="ul">to offer lead generation services,</li>
+                    <li class="ul">to detect and defend against fraud and other threats to the Services and our users,
+                    </li>
+                    <li class="ul">to identify issues with the Services,</li>
+                    <li class="ul">to conduct research and measurement activities, including those described below, and
+                    </li>
+                    <li class="ul">to administer your account.</li>
+                </ul>
+                <p class="p1">WELLnest may combine your personal information and other information collected about your
+                    use
+                    of the
+                    Services, and also supplement with information from external sources for the purposes described in
+                    this
+                    Privacy Policy. For example, information that WELLnest collects about you may be combined by
+                    WELLnest with
+                    other information available to WELLnest through third parties for research and measurement purposes,
+                    including measuring the effectiveness of content, advertising or programs. This information from
+                    other
+                    sources may include age, gender, demographic, geographic, personal interests, product purchase
+                    activity
+                    or other information. We may report aggregate information, which is not able to be identified back
+                    to an
+                    individual user of the WELLnest Sites, to our current or prospective advertisers and other business
+                    partners.</p>
+                </p>
+                <h4 class="pol3"><u>How Your Information is Secured and Retained</u></h4>
+                <p class="p1">
+                    We take reasonable security measures to protect the security of your personal information. Despite
+                    WELLnest efforts to protect your personal information, there is always some risk that an
+                    unauthorized third party may find a way around our security systems or that transmissions of your
+                    information over the Internet may be intercepted. <br><br>
+                    The security of your personal information is important to us. When you enter personal information
+                    (including personal health information in various Services), we encrypt the transmission of that
+                    information or use SSL connections (Secure Socket Layer) technology.
+                    <br><br>
+                    We will retain your personal information as long as your account is active or as needed to provide
+                    you Services. At any time you can remove your personal information or instruct us to remove it, but
+                    you should be aware that it is not technologically possible to remove each and every record of the
+                    information you have provided to WELLnest from our servers. See “Your Choices and Rights” below for
+                    more information on how you can update or remove your personal information. We will also retain your
+                    personal information as necessary to comply with legal obligations, resolve disputes and enforce our
+                    agreements.
+                </p>
+            </div><br><br>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Children's Health</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/children-style.css' %}">
+
+
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div style="z-index: 0;">
+        <header>
+            <h1><b>Children's Health</b></h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#exercise">Exercise</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-10 col-lg-9 col-md-9 col-sm-12">
+                    <main>
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../static/image folder/childhealth1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../static/image folder/childimg2.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../static/image folder/childimg1.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <section id="home">
+                            <h2><i><b>Welcome to Children's Health</b></i></Welcome>
+                            </h2>
+                            <p>At Children's Health, we care about your child's well-being. Our website provides
+                                valuable information
+                                and resources on nutrition, exercise, and safety to help your child stay healthy and
+                                happy.</p>
+                        </section>
+                        <section id="nutrition">
+                            <h2><b>Nutrition</b></h2>
+                            <img src="../static/image folder/childnutrition3.jpg" style="width: 100%;">
+                            <p>Proper nutrition is essential for your child's growth and development. It plays a vital
+                                role in
+                                maintaining their overall health and well-being. Here are some key aspects of nutrition
+                                for children:
+                            </p>
+                            <ul>
+                                <li>The importance of a balanced diet that includes fruits, vegetables, whole grains,
+                                    lean proteins, and
+                                    healthy fats</li>
+                                <li>Tips for encouraging your child to try new foods and develop healthy eating habits
+                                </li>
+                                <li>Understanding portion sizes and creating balanced meals for different age groups
+                                </li>
+                                <li>The significance of key nutrients such as calcium, iron, vitamin D, and omega-3
+                                    fatty acids</li>
+                                <li>Addressing common nutritional concerns such as food allergies, intolerances, and
+                                    restrictions</li>
+                            </ul>
+                            <div class="expandable-content">
+                                <p>Here are some additional resources and tips you can explore:</p>
+                                <ul>
+                                    <li>Prepare healthy and delicious meals for your child by incorporating a variety of
+                                        fruits and
+                                        vegetables, whole grains, and lean proteins.</li>
+                                    <li>Introduce new foods gradually and involve your child in meal planning and
+                                        preparation to develop
+                                        their interest in nutritious meals.</li>
+                                    <li>Learn about appropriate portion sizes for your child's age and size, ensuring
+                                        they receive
+                                        adequate nutrition without overeating.</li>
+                                    <li>Consider specific nutrient needs, such as calcium for bone health and iron for
+                                        cognitive
+                                        development, and incorporate food sources rich in these nutrients.</li>
+                                    <li>If your child has food allergies or intolerances, consult a healthcare
+                                        professional to ensure
+                                        they receive a balanced diet while managing their specific dietary needs.</li>
+                                </ul>
+                            </div>
+                            <p class="read-more-link" onclick="toggleContent('nutrition')">Read more</p>
+                        </section>
+                        <section id="exercise">
+
+                            <h2><b>Exercise</b></h2>
+                            <img src="../static/image folder/childexercise.jpg" style="width: 55vw;">
+                            <p>Regular physical activity is crucial for your child's physical and mental well-being.
+                                Encouraging your
+                                child to be physically active helps in:</p>
+                            <ul>
+                                <li>Strengthening their muscles and bones</li>
+                                <li>Improving cardiovascular health</li>
+                                <li>Maintaining a healthy body weight</li>
+                                <li>Enhancing coordination, balance, and flexibility</li>
+                                <li>Promoting better sleep and reducing the risk of chronic diseases</li>
+                            </ul>
+                            <div class="expandable-content">
+                                <p>Here are some additional resources and ideas to incorporate exercise into your
+                                    child's routine:</p>
+                                <ul>
+                                    <li>Encourage your child to engage in age-appropriate physical activities such as
+                                        running, jumping,
+                                        swimming, biking, and dancing.</li>
+                                    <li>Make exercise fun by organizing family outings to parks, playgrounds, or nature
+                                        trails where
+                                        your child can enjoy active play and exploration.</li>
+                                    <li>Consider enrolling your child in sports programs or community classes that align
+                                        with their
+                                        interests, such as soccer, basketball, martial arts, or dance.</li>
+                                    <li>Ensure your child exercises safely by providing appropriate protective gear,
+                                        supervising their
+                                        activities, and teaching them proper warm-up and cool-down techniques.</li>
+                                    <li>Limit sedentary activities such as excessive screen time and encourage breaks
+                                        for physical
+                                        movement throughout the day.</li>
+                                </ul>
+                            </div>
+                            <p class="read-more-link" onclick="toggleContent('exercise')">Read more</p>
+                        </section>
+                        <section id="safety">
+                            <img src="../static/image folder/childsafety.jpg">
+                            <h2><b>Safety</b></h2>
+                            <p>Ensuring your child's safety is a top priority. By following important safety measures,
+                                you can protect
+                                your child from accidents and create a secure environment. Here are some areas to focus
+                                on:</p>
+                            <ul>
+                                <li>Childproofing your home to prevent falls, burns, choking hazards, and other
+                                    potential dangers</li>
+                                <li>Water safety guidelines for swimming</li>
+                                <li>Water safety guidelines for swimming pools, bathtubs, and natural bodies of water
+                                </li>
+                                <li>Tips for safely navigating the internet and using electronic devices</li>
+                                <li>Importance of proper car seat usage and safe transportation practices</li>
+                                <li>Preventing common injuries during sports and outdoor activities</li>
+                            </ul>
+                            <div class="expandable-content">
+                                <p>Here are some additional resources and tips for ensuring your child's safety:</p>
+                                <ul>
+                                    <li>Perform a thorough childproofing of your home, including securing furniture,
+                                        covering electrical
+                                        outlets, and installing safety gates and window guards.</li>
+                                    <li>Supervise children during bath time and implement water safety measures such as
+                                        using non-slip
+                                        mats, emptying containers after use, and maintaining constant supervision.</li>
+                                    <li>Educate your child about online safety, including responsible internet usage,
+                                        privacy settings,
+                                        and avoiding sharing personal information with strangers.</li>
+                                    <li>Always use age-appropriate car seats and seat belts when traveling with your
+                                        child, following
+                                        the manufacturer's guidelines and local regulations.</li>
+                                    <li>Encourage your child to wear appropriate safety gear, such as helmets and pads,
+                                        during sports
+                                        and outdoor activities to prevent injuries.</li>
+                                    <li>Teach your child about potential hazards and safety rules in different
+                                        environments, including
+                                        playgrounds, parks, and road crossings.</li>
+                                    <li>Regularly inspect and maintain toys, equipment, and play areas to ensure they
+                                        are safe and free
+                                        from potential dangers.</li>
+                                    <li>Stay updated on the latest safety guidelines and recommendations from trusted
+                                        sources, such as
+                                        pediatricians and child safety organizations.</li>
+                                </ul>
+                            </div>
+                            <p class="read-more-link" onclick="toggleContent('safety')">Read more</p>
+                        </section>
+                        <section id="contact">
+                            <h2><b>Contact Us</b></h2>
+                            <p>If you have any questions or concerns regarding your child's health, feel free to reach
+                                out to our team.
+                                We're here to help!</p>
+                            <p>Phone: 123-456-7890</p>
+                            <p>Email: info@childrenhealth.com</p>
+                        </section>
+                    </main>
+                </div>
+                <div class="col-0 col-xl-2 col-lg-3 col-md-3 col-sm-0"><br><br>
+                    <div class="r1">
+                        <h6 class="pol1"><u>ABOUT US</u></h6>
+                        <p>
+                            <a href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                        <h6 class="pol1"><u>POLICIES</u></h6>
+                        <p>
+                            <a href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                        <h6 class="pol1"><u>CONTACT</u></h6>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        {% load static %}
+        <script src="{% static 'js folder/well_being.js' %}"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(1, 56, 39);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6fcf6;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container-fluid {
+    width: 70%;
+    padding: 20px;
+    position: relative;
+  }
+ 
+  .btn-primary {
+    background-color: rgb(1, 56, 39);
+    border-color: rgb(1, 56, 39);
+  }
+  
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgb(1, 56, 39);
+  }

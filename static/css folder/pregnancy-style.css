@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #FFD700;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  color: #333333;
+  margin: 0;
+  font-size: 32px;
+}
+nav {
+  background-color: #333333;
+  padding: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+main {
+  padding: 20px 5%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  nav ul li {
+    margin-right: 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  main {
+    padding: 10px;
+  }
+}
+
+.expandable-content {
+  display: none;
+  padding-top: 10px;
+}
+
+.expandable-content.open {
+  display: block;
+}
+
+.read-more-link {
+  cursor: pointer;
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar{
+  position: sticky;
+  top: 0;
+}
+
+section{
+  margin: 0 5%;
+}
+
+main{
+  background-color: #f6fcf6;
+}
+
+
+
+
+
+
+
+
+h1{
+  font-weight: 700;
+  display: inline-block;
+  color: rgb(1, 56, 39);
+}
+h3{
+  font-weight: 600;
+  color: rgb(1, 56, 39);
+}
+.g1{
+  text-decoration: none;
+  color: rgb(2, 72, 51);
+}
+a:hover{
+  border-bottom: 2px solid rgb(1, 56, 39);
+}
+.foot-1{
+  background: rgb(212, 247, 236);
+}
+p{
+  color: rgb(2, 72, 51);
+}
+.nest{
+  font-size: 30px;
+  font-weight: 500;
+  display: inline-block;
+}
+.foot-2{
+  background-color: rgb(1, 41, 29);
+  text-align: center;
+}
+.s1{
+  padding: 19px;
+  font-size: 33px;
+}
+@media only screen and (max-width:470px){
+  #logo1{
+      width: 156px;
+  }
+  h3{
+      font-size: 22px;
+  }
+  .f1{
+      font-size: 14px;
+  }
+  .foot{
+      font-size: 14px;
+  }
+  .s1{
+      font-size: 26px;
+      margin: 0;
+      padding: 10px 12px;
+  }
+  .f3{
+      display: none;
+  }
+}
+@media only screen and (max-width:360px){
+  .s1{
+      font-size: 24px;
+      margin: 0;
+      padding: 8px;
+  }
+  #logo1{
+      width: 138px;
+  }
+}
+@media only screen and (max-width:620px) and (min-width:35px){
+  .column{
+      padding-left: 7%;
+  }
+}
+.btn.btn1 {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}

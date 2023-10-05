@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <title>Weight Management</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/weight-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 class="he1">Weight Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#exercise">Exercise</a></li>
+            <li><a href="#lifestyle">Lifestyle</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 col-lg-9 col-md-9 col-sm-12">
+                <main>
+                    <section id="home">
+                        <h2 style="font-weight: 700;"><i>Welcome to Weight Management</i></h2>
+                        <img style="width: 80%;" src="../static/image folder/w1.jpeg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">At Weight Management, we provide resources and guidance to help individuals achieve and maintain a
+                            healthy weight. Our website offers information on nutrition, exercise, lifestyle strategies, and more
+                            for effective weight management.</p>
+                    </section>
+                    <section id="nutrition">
+                        <h2 style="font-weight: 700;">Nutrition</h2>
+                        <img style="width: 80%;" src="../static/image folder/w2.jpeg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">A balanced and nutritious diet is essential for weight management. Here are some key aspects of nutrition
+                            for effective weight management:</p>
+                        <ul style="font-size: 20px;">
+                            <li>The importance of portion control and mindful eating</li>
+                            <li>Incorporating nutrient-dense foods like fruits, vegetables, whole grains, and lean proteins</li>
+                            <li>Understanding macronutrients and their role in a healthy diet</li>
+                            <li>Hydration and its impact on metabolism and appetite regulation</li>
+                            <li>Addressing emotional eating and developing a positive relationship with food</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and tips for maintaining a healthy diet for weight management:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Practice portion control by using smaller plates, bowls, and utensils.</li>
+                                <li>Eat mindfully, paying attention to your hunger and fullness cues.</li>
+                                <li>Include a variety of colorful fruits and vegetables in your meals.</li>
+                                <li>Choose whole grains over refined grains for added fiber and nutrients.</li>
+                                <li>Incorporate lean sources of protein, such as poultry, fish, beans, and legumes.</li>
+                                <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+                                <li>Seek guidance from a registered dietitian for personalized nutrition advice.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('nutrition')">Read more</p>
+                    </section>
+                    <section id="exercise">
+                        <h2 style="font-weight: 700;">Exercise</h2>
+                        <img style="width: 80%;" src="../static/image folder/w3.jpg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">Regular physical activity plays a crucial role in weight management. Here are some benefits of exercise
+                            for weight management:</p>
+                        <ul style="font-size: 20px;">
+                            <li>Burning calories and increasing metabolic rate</li>
+                            <li>Building lean muscle mass and improving body composition</li>
+                            <li>Boosting energy levels and promoting overall well-being</li>
+                            <li>Supporting cardiovascular health and reducing the risk of chronic diseases</li>
+                            <li>Enhancing mood and reducing stress</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and ideas to incorporate exercise into your weight management
+                                routine:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Engage in aerobic activities like brisk walking, jogging, cycling, or swimming.</li>
+                                <li>Incorporate strength training exercises using weights, resistance bands, or bodyweight
+                                    exercises.</li>
+                                <li>Include activities you enjoy, such as dancing, hiking, or group fitness classes, to make
+                                    exercise enjoyable and sustainable.</li>
+                                <li>Set realistic goals and gradually increase the duration and intensity of your workouts.</li>
+                                <li>Stay active throughout the day by incorporating activities like walking breaks, taking the
+                                    stairs, or parking farther away.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('exercise')">Read more</p>
+                    </section>
+                    <section id="lifestyle">
+                        <h2 style="font-weight: 700;">Lifestyle</h2>
+                        <p style="font-size: 20px;">Adopting healthy lifestyle habits is key to successful weight management. Here are some lifestyle
+                            strategies to support your weight management goals:</p>
+                        <ul style="font-size: 20px;">
+                            <li>Getting adequate sleep and managing stress levels</li>
+                            <li>Maintaining a balanced and consistent meal schedule</li>
+                            <li>Tracking your progress and making adjustments as needed</li>
+                            <li>Building a supportive social network and seeking accountability</li>
+                            <li>Practicing self-care and finding ways to manage emotional well-being</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and tips to support your weight management journey:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Prioritize quality sleep and aim for 7-8 hours of restful sleep each night.</li>
+                                <li>Implement stress management techniques like meditation, deep breathing exercises, or engaging in
+                                    activities you enjoy.</li>
+                                <li>Create a balanced and consistent meal schedule that includes regular meals and healthy snacks.
+                                </li>
+                                <li>Track your progress by keeping a food journal or using a mobile app to monitor your eating
+                                    habits and physical activity.</li>
+                                <li>Build a supportive social network of friends, family, or online communities to share your weight
+                                    management journey and seek accountability.</li>
+                                <li>Practice self-care activities that promote relaxation, reduce stress, and support your overall
+                                    well-being.</li>
+                                <li>Find healthy ways to cope with emotional triggers or stressors that may lead to overeating or
+                                    unhealthy food choices.</li>
+                                <li>Stay motivated by setting realistic goals, rewarding yourself for milestones, and celebrating
+                                    your progress along the way.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('lifestyle')">Read more</p>
+                    </section>
+                    <section id="contact">
+                        <h2 style="font-weight: 700;">Contact Us</h2>
+                        <p style="font-size: 20px;">If you have any questions or need further assistance with weight management, feel free to contact us.
+                            We're here to help!</p>
+                        <p style="font-size: 20px;">Phone: 123-456-7890</p>
+                        <p style="font-size: 20px;">Email: info@weightmanagement.com</p>
+                    </section>
+                </main>
+            </div>
+            <div class="col-0 col-xl-2 col-lg-3 col-md-3 col-sm-0">
+                <div class="r1">
+                    <h6 class="pol1"><u>ABOUT US</u></h6>
+                    <p>
+                        <a href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                    <h6 class="pol1"><u>POLICIES</u></h6>
+                    <p>
+                        <a href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                    <h6 class="pol1"><u>CONTACT</u></h6>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                            
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    {% load static %}
+    <script src="{% static 'js folder/well_being.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

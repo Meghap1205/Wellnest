@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/wellness-style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Wellness Page</title>
+</head>
+
+<body>
+
+  <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+    <div class="container">
+        <a class="navbar-brand"  href="{% url 'about' %}">
+            <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Workout
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                        <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Well Being
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                Health</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                >Weight-management</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                Health</a></li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'womens' %}">Women's health</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                    </li>
+                        
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+  <div class="c3">
+    <br>
+    <h1 style="padding-left: 32%;"><u><i><b>Wellness Calculator</b></i></u></h1>
+    <div class="c2 container">
+      <div class="row">
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>BMI Calculator</h2>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight">
+          <br>
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height">
+          <br>
+          <button onclick="calculateBMI()">Calculate BMI</button>
+          <p id="bmiResult"></p>
+          <p id="bmiCategory"></p>
+          <p id="requirements"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Ovulation Cycle</h2>
+          <label for="lastPeriod">Last Menstrual Period:</label>
+          <input type="date" id="lastPeriod">
+          <br>
+          <button onclick="calculateOvulation()">Calculate Ovulation</button>
+          <p id="ovulationResult"></p>
+        </div>
+        <div class="c1 column1 col-12">
+          <h2>Nutrition Level</h2>
+          <label for="protein">Protein Intake (g):</label>
+          <input type="number" id="protein">
+          <br>
+          <label for="vitaminC">Vitamin C Intake (mg):</label>
+          <input type="number" id="vitaminC">
+          <br>
+          <label for="calcium">Calcium Intake (mg):</label>
+          <input type="number" id="calcium">
+          <br>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight">
+          <br>
+          <button onclick="calculateNutrition()">Calculate Nutrition Level</button>
+          <p id="proteinRequirement"></p>
+          <p id="vitaminCRequirement"></p>
+          <p id="calciumRequirement"></p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h1 style="padding-left: 25%;"><u><i>Requirements and Overall Results</i></u></h1>
+    <div class="c2 container-fluid">
+      <div class="row">
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Stress Levels</h2>
+          <label for="stressLevel">Stress Level (1-10):</label>
+          <input type="number" id="stressLevel">
+          <br>
+          <button onclick="assessStressLevels()">Assess Stress Levels</button>
+          <p id="stressLevelsResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Newborn Baby Health</h2>
+          <label for="babyWeight">Weight (kg):</label>
+          <input type="number" id="babyWeight">
+          <br>
+          <button onclick="calculateBabyHealth()">Calculate Newborn Baby Health</button>
+          <p id="babyHealthResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Heart Rate Check</h2>
+          <label for="heartRate">Heart Rate:</label>
+          <input type="number" id="heartRate">
+          <br>
+          <button onclick="checkHeartRate()">Check Heart Rate</button>
+          <p id="heartRateResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Blood Pressure Check</h2>
+          <label for="systolic">Systolic Pressure:</label>
+          <input type="number" id="systolic">
+          <br>
+          <label for="diastolic">Diastolic Pressure:</label>
+          <input type="number" id="diastolic">
+          <br>
+          <button onclick="checkBloodPressure()">Check Blood Pressure</button>
+          <p id="bloodPressureResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Sleep Quality</h2>
+          <label for="hoursOfSleep">Hours of Sleep:</label>
+          <input type="number" id="hoursOfSleep">
+          <br>
+          <button onclick="assessSleepQuality()">Assess Sleep Quality</button>
+          <p id="sleepQualityResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Mental Well-being</h2>
+          <label for="anxietyLevel">Anxiety Level (1-10):</label>
+          <input type="number" id="anxietyLevel">
+          <br>
+          <label for="depressionLevel">Depression Level (1-10):</label>
+          <input type="number" id="depressionLevel">
+          <br>
+          <button onclick="assessMentalWellbeing()">Assess Mental Well-being</button>
+          <p id="mentalWellbeingResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Physical Fitness</h2>
+          <label for="cardioFitness">Cardiovascular Fitness (1-5):</label>
+          <input type="number" id="cardioFitness">
+          <br>
+          <label for="strengthFitness">Muscular Strength (1-5):</label>
+          <input type="number" id="strengthFitness">
+          <br>
+          <button onclick="assessPhysicalFitness()">Assess Physical Fitness</button>
+          <p id="physicalFitnessResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Hydration</h2>
+          <label for="dailyWaterIntake">Daily Water Intake (cups):</label>
+          <input type="number" id="dailyWaterIntake">
+          <br>
+          <button onclick="assessHydration()">Assess Hydration</button>
+          <p id="hydrationResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Social Connections</h2>
+          <label for="socialInteractions">Number of Social Interactions:</label>
+          <input type="number" id="socialInteractions">
+          <br>
+          <button onclick="assessSocialConnections()">Assess Social Connections</button>
+          <p id="socialConnectionsResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Emotional Intelligence</h2>
+          <label for="selfAwareness">Self-Awareness (1-5):</label>
+          <input type="number" id="selfAwareness">
+          <br>
+          <label for="selfRegulation">Self-Regulation (1-5):</label>
+          <input type="number" id="selfRegulation">
+          <br>
+          <button onclick="assessEmotionalIntelligence()">Assess Emotional Intelligence</button>
+          <p id="emotionalIntelligenceResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Cognitive Function</h2>
+          <label for="memoryFunction">Memory Function (1-5):</label>
+          <input type="number" id="memoryFunction">
+          <br>
+          <label for="attentionSpan">Attention Span (1-5):</label>
+          <input type="number" id="attentionSpan">
+          <br>
+          <button onclick="assessCognitiveFunction()">Assess Cognitive Function</button>
+          <p id="cognitiveFunctionResult"></p>
+        </div>
+        <div class="c1 column1 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h2>Environmental Factors</h2>
+          <label for="pollutionExposure">Pollution Exposure (1-5):</label>
+          <input type="number" id="pollutionExposure">
+          <br>
+          <label for="accessToGreenSpaces">Access to Green Spaces (1-5):</label>
+          <input type="number" id="accessToGreenSpaces">
+          <br>
+          <button onclick="assessEnvironmentalFactors()">Assess Environmental Factors</button>
+          <p id="environmentalFactorsResult"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                       
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+  <script src="../static/js folder/well-script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(1, 56, 39);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6fcf6;
+  }
+  
+  .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container-fluid {
+    color:  rgb(1, 56, 39);
+    width: 70%;
+    padding: 20px;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+ 
+  .btn-primary {
+    background-color: rgb(1, 56, 39);
+    border-color: rgb(1, 56, 39);
+  }
+  
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgb(1, 56, 39);
+  }
+  /* Rest of your existing CSS (same as before) */
+
+.moving-element {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveElement 3s infinite alternate;
+  }
+  
+  @keyframes moveElement {
+    from {
+      left: 50%;
+    }
+    to {
+      left: 70%;
+    }
+  }
+  
+  

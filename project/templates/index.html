@@ -1,0 +1,606 @@
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css folder/style.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+       
+    <title>WELLnest</title>
+</head>
+
+<body>
+
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand" href="/WELLnest/template/about.html"><img
+                src="static/image folder/aboutlogo2.png" alt="img"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container n1"><br>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/image folder/img1.jpg" class="img1 d-block w-100 img-thumbnail" alt="img"
+                        style="max-height: 64vh;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 2rem; color: black; font-weight: 600;"><i><u>Vegan and Vegetarian
+                                    Ideas</u></i></h5>
+                        <p style="font-size: 1.2em; color: rgb(4, 52, 0); font-weight: 600;">Plant-based diets tend
+                            to
+                            be lower in calories and saturated fats, making them beneficial for weight management.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/image folder/img2.jpg" class="d-block w-100 img-thumbnail" alt="img"
+                        style="max-height: 64vh;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 2rem; color: rgb(255, 255, 255); font-weight: 600;"><u>Yoga for every
+                                day</u>
+                        </h5>
+                        <p style="font-size: 1.2em; color: rgb(224, 222, 222); font-weight: 600;">You can also
+                            explore
+                            various yoga styles and incorporate different poses based on your preferences and goals.
+                            It's essential to maintain a consistent yoga practice to experience the long-term
+                            benefits.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/image folder/img3.jpg" class="d-block w-100 img-thumbnail" alt="img"
+                        style="max-height: 64vh;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 2rem; color: rgb(0, 0, 0); font-weight: 600;"><i><u>Daily
+                                    Workout</u></i>
+                        </h5>
+                        <p style="font-size: 1.2em; color: rgb(237, 255, 235); font-weight: 600;">Regular exercise
+                            is an
+                            essential component of a healthy lifestyle. Here's a general workout routine that you
+                            can
+                            consider incorporating into your fitness regimen. </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="m1">
+        <img src="static/image folder/image10.jpg" class="img-fluid img-thumbnail" alt="img">
+    </div>
+    <br>
+
+
+
+    <div class="container2">
+       
+        <h1 class="heading">Workout Plans..</h1>
+        <hr>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="static/image folder/armworkoutimg2.jpg" alt="img">
+                <h3>Arm Workout</h3>
+                <p>The Best Arm Workouts For Size, Strength & Beginners...</p>
+                <a href="{% url 'arm-workout' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/homeworkoutimg4.jpg" alt="img">
+                <h3>Home Workout</h3>
+                <p>Here's a basic workout plan that you can follow:</p>
+                <a href="{% url 'home' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/siximg3.jpg" alt="img">
+                <h3>Six Pack</h3>
+                <p>Achieving a visible six-pack requires having low body fat ...</p>
+                <a href="{% url 'six' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box ">
+                <img src="static/image folder/loseimg3.jpg" alt="img">
+                <h3>Lose Weight</h3>
+                <p>These Science-Backed Tips Can Help You Lose Weight...</p>
+                <a href="{% url 'lose' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box v1">
+                <img src="static/image folder/fitnessimg1.jpg" alt="img">
+                <h3>Fitness Coach</h3>
+                <p>Filter out the noise and nurture your indbox with health and...</p>
+                <a href="{% url 'fitness' %}" class="btn">read more</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="y1 container">
+        <h1 class="heading"><b>Tools..</b></h1>
+        <hr>
+        <br>
+        <div class="y2 container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="y3 card">
+                        <img src="static/image folder/bmi.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i><u>BMI Calculator</u></i></b></h5>
+                            <p class="card-text">BMI is a measurement that estimates an individual's body fat based
+                                on their height and weight. It is as a screening tool to assess whether someone
+                                falls within a healthy weight range. </p>
+                                <a href="{% url 'bmi' %}"  class="btn"
+                                style="background-color: #013827; color: white;">Calculate BMI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="y3 card">
+                        <img src="static/image folder/height.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b><u><i>Check Your Health</i></u></b></h5>
+                            <p class="card-text">Assess your health with interactive tools such as calculators,
+                                quizzes, and questionnaires. You can check your risk for heart disease, calculate
+                                your ideal weight and body mass.</p>
+                                <a href="{% url 'wellness' %}"  class="btn"
+                                style="background-color: #013827; color: white;">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h2 style="font-weight: 600;"><i>Some common Ques:</i></h2>
+        <hr>
+        <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                            style="z-index: 0; padding: 1.5% 2%">
+                            How much water should you drink each day?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"> The recommended daily water intake varies depending on factors
+                            such as age, activity level, and climate. A general guideline is to drink at least 8
+                            glasses (64 ounces) of water per day. However, individual needs may differ, so it's
+                            important to listen to your body and stay adequately hydrated.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                            style="z-index: 0; padding: 1.5% 2%">
+                            How can I improve my sleep quality?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">To improve sleep quality, you can follow these tips:
+                            <ul>
+                                <li>Maintain a consistent sleep schedule by going to bed and waking up at the same
+                                    time.
+                                </li>
+                                <li>Create a sleep-friendly environment that is dark, quiet, and comfortable.</li>
+                                <li>Limit exposure to screens (such as phones or tablets) before bedtime.</li>
+                                <li>Engage in relaxation techniques like deep breathing or meditation to calm your
+                                    mind
+                                    before sleep.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree" style="z-index: 0; padding: 1.5% 2%">Some tips for
+                            maintaining a healthy diet?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Here are a few tips for maintaining a healthy diet:
+                            <ul>
+                                <li>Include a variety of fruits, vegetables, whole grains, lean proteins,
+                                    and healthy
+                                    fats in your meals.</li>
+                                <li>Limit processed and sugary foods.</li>
+                                <li>Pay attention to portion sizes and practice mindful eating.</li>
+                                <li>Stay hydrated and limit sugary drinks.</li>
+                                <li>Plan and prepare meals in advance to make healthier choices easier.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+
+
+
+    <div class="container2">
+
+        <h1 class="heading">Explore By..</h1>
+        <hr>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="static/image folder/nutrition1.png" alt="img">
+                <h3>Nutrition</h3>
+                <p>By nourishing your body with wholesome fruits,vegetables...</p>
+                <a href="{% url 'nutrition' %}"  class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/sleep2.png" alt="img">
+                <h3>Sleep</h3>
+                <p>The power of quality sleep, you can experience heightened...</p>
+                <a href="{% url 'sleep' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/mentalhealth3.png" alt="img">
+                <h3>Mental Health</h3>
+                <p>By nurturing your mental health, you can experience a profound...</p>
+                <a href="{% url 'mental-health' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box vis">
+                <img src="static/image folder/fitness4.png" alt="img">
+                <h3>Fitness</h3>
+                <p>By embracing fitness, you can achieve a level of physical and
+                    ...</p>
+                <a href="{% url 'fitness' %}"  class="btn">read more</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="e1 container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="static/image folder/covid.jpg" alt="img" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-lg-7">
+                <h2>Coronavirus (COVID-19) Dashboard</h2>
+                <p class="e3">The symptoms of COVID-19 can range from mild to severe and may include fever, cough,
+                    shortness of breath, fatigue, body aches, loss of taste or smell, sore throat, and more. In
+                    severe
+                    cases, it could lead to pneumonia, acute respiratory distress syndrome (ARDS), organ failure,
+                    and
+                    death. <br><br>
+
+                    To prevent the spread of the virus, health authorities and governments around the world have
+                    recommended various preventive measures, including wearing masks, practicing physical
+                    distancing,
+                    frequent handwashing, and avoiding large gatherings. Vaccination campaigns have also been
+                    underway
+                    to provide immunity against the virus.
+                </p>
+                <ul>
+                    <li><b>Pfizer-BioNTech (Comirnaty):</b> An mRNA-based vaccine that requires two doses
+                        administered
+                        three weeks apart.</li>
+                    <li><b>Moderna:</b> Another mRNA-based vaccine that requires two doses administered four weeks
+                        apart.</li>
+                    <li><b>Sputnik V:</b> A viral vector-based vaccine developed in Russia.</li>
+                </ul>-
+                <a class="e5" href="https://covid19.who.int/"> Learn More about COVID-19.</a>
+            </div>
+        </div>
+    </div><br>
+
+
+
+
+
+    <div class="container2">
+
+        <h1 class="heading">Well Being..</h1>
+        <hr>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="static/image folder/image100.jpg" alt="img">
+                <h3>Children Health</h3>
+                <p>Proper nutrition is essential for your child's growth and... </p>
+                <a href="{% url 'children' %}"  class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/image200.jpg" alt="img">
+                <h3>Weight Management</h3>
+                <p>A balanced and nutritious diet is essential for weight management.</p>
+                <a href="{% url 'weight' %}"class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="static/image folder/image300.jpeg" alt="img">
+                <h3>Womens Health</h3>
+                <p>Regular physical activity is crucial for women's health. </p>
+                <a href="{% url 'womens' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box ">
+                <img src="static/image folder/image400.jpeg" alt="img">
+                <h3>Pregnancy</h3>
+                <p>Here are some health tips for a smooth and enjoyable pregnancy.</p>
+                <a href="{% url 'pregnancy' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box v1">
+                <img src="static/image folder/image500.jpeg" alt="img">
+                <h3>Mens Health</h3>
+                <p>A healthy diet plays a crucial role in maintaining optimal health for men.</p>
+               <a href="{% url 'mens' %}" class="btn">read more</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="e1 container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="static/image folder/image11.jpg" alt="img" class="img-fluid">
+            </div>
+            <div class="col-lg-7">
+                <h2>Our Content Is Different Because We Set the Bar Higher</h2>
+                <p class="e3">As a leader in digital health publishing for more than 25 years, WELLnest strives to
+                    maintain the most
+                    comprehensive and reliable source of health and medical information on the internet.
+                    <br><br>
+                    We recognize the responsibility that comes along with being the most well-known and trusted
+                    health
+                    information platform — and we take that responsibility seriously by:
+                </p>
+                <ul>
+                    <li>Charging our content creators to practice journalistic principles of excellence and provide
+                        objective, accurate, and balanced reporting</li>
+                    <li>Maintaining editorial independence and transparency into how we protect the integrity of our
+                        content</li>
+                    <li>Regularly reviewing and updating our content by working with our network of more than 100
+                        doctors and health experts</li>
+                </ul>-
+                <a class="e5" href="{% url 'about' %}"> Learn More about WELLnest.</a>
+            </div>
+        </div>
+    </div><br>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                            <form class="d-flex" role="search">
+                                <button class="btn btn1 btn-outline-success f3 " type="submit"><a href="{% url 'home_page' %}">connect with us</a></button>
+                            </form>
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

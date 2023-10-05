@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pregnancy Health</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css folder/pregnancy-style.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+  <header>
+    <h1>Pregnancy Health</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#nutrition">Nutrition</a></li>
+      <li><a href="#exercise">Exercise</a></li>
+      <li><a href="#health">Health Tips</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2 style="font-weight: 700;"><i>Welcome to Pregnancy Health</i></h2>
+      <img style="width: 60%;" src="../static/image folder/p1.jpg" alt="img" class="img-fluid img-thumbnail">
+      <p style="font-size: 20px;">Congratulations on your pregnancy journey! At Pregnancy Health, we provide information and resources to support you during this special time. Our website offers valuable insights on nutrition, exercise, health tips, and more for a healthy and happy pregnancy.</p>
+    </section>
+    <section id="nutrition">
+      <h2 style="font-weight: 700;">Nutrition</h2>
+      <p style="font-size: 20px;">A well-balanced diet is crucial for a healthy pregnancy. Here are some key aspects of nutrition during pregnancy:</p>
+      <ul style="font-size: 20px;">
+        <li>Getting essential nutrients like folate, iron, calcium, and omega-3 fatty acids</li>
+        <li>Eating a variety of fruits, vegetables, whole grains, lean proteins, and dairy products</li>
+        <li>Avoiding certain foods and beverages that may pose risks to the baby</li>
+        <li>Staying hydrated and consuming adequate water</li>
+        <li>Managing weight gain with the guidance of your healthcare provider</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 20px;">Here are some additional resources and tips for maintaining a healthy diet during pregnancy:</p>
+        <ul style="font-size: 20px;">
+          <li>Include prenatal vitamins as recommended by your healthcare provider.</li>
+          <li>Consume foods rich in folate, such as leafy greens, legumes, and fortified grains.</li>
+          <li>Ensure an adequate intake of iron through sources like lean meats, poultry, beans, and fortified cereals.</li>
+          <li>Incorporate calcium-rich foods like dairy products, fortified plant-based milk, and leafy greens.</li>
+          <li>Include sources of omega-3 fatty acids, such as salmon, walnuts, and chia seeds, for baby's brain development.</li>
+          <li>Avoid raw or undercooked seafood, unpasteurized dairy products, and certain deli meats to minimize the risk of foodborne illnesses.</li>
+          <li>Consult with a registered dietitian or healthcare provider for personalized nutrition guidance during pregnancy.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('nutrition')">Read more</p>
+    </section>
+    <section id="exercise">
+      <h2 style="font-weight: 700;">Exercise</h2>
+      <img style="width: 60%;" src="../static/image folder/p2.avif" alt="img" class="img-fluid img-thumbnail">
+      <p style="font-size: 20px;">Staying active and engaging in regular exercise can benefit both you and your baby during pregnancy. Here are some exercise considerations:</p>
+      <ul style="font-size: 20px;">
+        <li>Consulting with your healthcare provider before starting or continuing an exercise routine</li>
+        <li>Engaging in low-impact activities that are safe and appropriate for pregnancy</li>
+        <li>Performing exercises that promote strength, flexibility, and cardiovascular health</li>
+        <li>Listening to your body and modifying exercises as needed</li>
+        <li>Staying well-hydrated and avoiding overheating</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 20px;">Here are some additional resources and ideas for exercising during pregnancy:</p>
+        <ul style="font-size: 20px;">
+          <li>Choose low-impact activities like walking, swimming, stationary cycling, or prenatal yoga.</li>
+          <li>Incorporate strength training exercises using light weights or resistance bands, focusing on maintaining proper form and avoiding excessive strain.</li>
+          <li>Practice stretching and flexibility exercises to maintain mobility and alleviate discomfort.</li>
+          <li>Attend prenatal exercise classes or seek guidance from certified prenatal fitness instructors.</li>
+          <li>Listen to your body and modify exercises based on your comfort level and any pregnancy-related symptoms.</li>
+          <li>Avoid activities with a high risk of falling or abdominal trauma.</li>
+          <li>Stay well-hydrated during exercise and choose appropriate clothing to ensure comfort.</li>
+          <li>Take breaks when needed and prioritize rest and recovery.</li>
+          <li>Consult with your healthcare provider for specific exercise recommendations based on your pregnancy.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('exercise')">Read more</p>
+    </section>
+    <section id="health">
+      <h2 style="font-weight: 700;">Health Tips</h2>
+      <img style="width: 60%;" src="../static/image folder/p3.jpg" alt="img" class="img-fluid img-thumbnail">
+      <p style="font-size: 20px;">During pregnancy, it's important to prioritize your health and well-being. Here are some health tips for a smooth and enjoyable pregnancy:</p>
+      <ul style="font-size: 20px;">
+        <li>Attend regular prenatal check-ups and follow your healthcare provider's advice.</li>
+        <li>Manage pregnancy symptoms such as nausea, fatigue, and mood changes.</li>
+        <li>Practice good hygiene and take precautions to prevent infections.</li>
+        <li>Get sufficient rest and prioritize sleep to support your body's needs.</li>
+        <li>Manage stress through relaxation techniques, meditation, or prenatal yoga.</li>
+        <li>Stay hydrated and drink plenty of water throughout the day.</li>
+        <li>Stay active and maintain a healthy lifestyle.</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 20px;">Here are some additional health tips for a healthy and comfortable pregnancy:</p>
+        <ul style="font-size: 20px;">
+          <li>Take prenatal vitamins as recommended by your healthcare provider.</li>
+          <li>Practice good posture and use supportive pillows for sleep.</li>
+          <li>Avoid exposure to harmful substances, such as tobacco smoke and certain chemicals.</li>
+          <li>Educate yourself about labor and childbirth options and discuss them with your healthcare provider.</li>
+          <li>Prepare for breastfeeding and seek guidance from lactation consultants or support groups.</li>
+          <li>Connect with other expectant parents and join prenatal classes or support groups for emotional support.</li>
+          <li>Discuss any concerns or questions with your healthcare provider to ensure a healthy pregnancy journey.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('health')">Read more</p>
+    </section>
+    <section id="contact">
+      <h2 style="font-weight: 700;">Contact Us</h2>
+      <p style="font-size: 20px;">If you have any questions or need further assistance during your pregnancy, feel free to contact us. We're here to support you!</p>
+      <p style="font-size: 20px;">Phone: 123-456-7890</p>
+      <p style="font-size: 20px;">Email: info@pregnancyhealth.com</p>
+    </section>
+  </main>
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                       
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+crossorigin="anonymous">
+{% load static %}
+<script src="{% static 'js folder/well_being.js' %}"></script>
+<script src="{% static 'js folder/pregnancy.js' %}"></script>
+
+
+</body>
+</html>
+

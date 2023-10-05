@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Men's Health</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/mens-style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    {% load static %}
+   
+</head>
+
+<body>
+  <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+    <div class="container">
+        <a class="navbar-brand"  href="{% url 'about' %}">
+            <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Workout
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                        <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Well Being
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                Health</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                >Weight-management</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                Health</a></li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'womens' %}">Women's health</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                    </li>
+                        
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+  <header>
+    <h1 style="font-weight: 700;">Men's Health</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#fitness">Fitness</a></li>
+      <li><a href="#nutrition">Nutrition</a></li>
+      <li><a href="#mental">Mental Health</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2 style="font-weight: 700;">Welcome to Men's Health</h2>
+      <p style="font-size: 21px;">Welcome to Men's Health, your ultimate resource for all things related to men's well-being. We provide
+        information, tips, and resources to help men achieve optimal physical and mental health.</p>
+    </section>
+    <section id="fitness">
+      <h2 style="font-weight: 700;">Fitness</h2>
+      <p style="font-size: 21px;">Staying fit is essential for overall health and vitality. Here are some key aspects of fitness for men:</p>
+      <ul style="font-size: 21px;">
+        <li>Engaging in regular physical activity, including cardiovascular exercises, strength training, and
+          flexibility exercises</li>
+        <li>Setting fitness goals and tracking progress</li>
+        <li>Maintaining a balanced exercise routine</li>
+        <li>Understanding proper form and technique for exercises</li>
+        <li>Listening to your body and avoiding overexertion or injuries</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 21px;">Here are some additional resources and tips for men's fitness:</p>
+        <ul style="font-size: 21px;">
+          <li>Include a mix of aerobic exercises like running, swimming, or cycling to improve cardiovascular health.
+          </li>
+          <li>Incorporate strength training exercises like weightlifting or bodyweight exercises to build muscle
+            strength and bone density.</li>
+          <li>Include flexibility exercises like stretching or yoga to improve range of motion and prevent injuries.
+          </li>
+          <li>Set realistic fitness goals and create a workout plan that suits your schedule and preferences.</li>
+          <li>Consider working with a personal trainer to get guidance and ensure proper form during exercises.</li>
+          <li>Listen to your body and take rest days when needed to avoid overtraining.</li>
+          <li>Stay hydrated and fuel your body with a balanced diet to support your fitness goals.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('fitness')">Read more</p>
+    </section>
+    <section id="nutrition">
+      <h2 style="font-weight: 700;">Nutrition</h2>
+      <p style="font-size: 21px;">A healthy diet plays a crucial role in maintaining optimal health for men. Here are some key aspects of
+        nutrition:</p>
+      <ul style="font-size: 21px;">
+        <li>Eating a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats</li>
+        <li>Getting essential nutrients like vitamins, minerals, and antioxidants</li>
+        <li>Limiting the consumption of processed foods, sugary drinks, and unhealthy fats</li>
+        <li>Staying properly hydrated by drinking enough water</li>
+        <li>Being mindful of portion sizes and practicing moderation</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 21px;">Here are some additional resources and tips for men's nutrition:</p>
+        <ul style="font-size: 21px;">
+          <li>Incorporate lean proteins like chicken, fish, tofu, and legumes into your diet.</li>
+          <li>Include a variety of colorful fruits and vegetables to ensure a wide range of vitamins and minerals.</li>
+          <li>Choose whole grains like brown rice, quinoa, and whole wheat bread for added fiber and nutrients.</li>
+          <li>Consume healthy fats from sources like avocados, nuts, seeds, and olive oil.</li>
+          <li>Limit your intake of processed foods, sugary snacks, and sugary drinks to maintain a healthy weight and
+            reduce the risk of chronic diseases.</li>
+          <li>Stay hydrated by drinking water throughout the day and limit the consumption of sugary beverages.</li>
+          <li>Consult with a registered dietitian for personalized nutrition advice and meal planning.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('nutrition')">Read more</p>
+    </section>
+    <section id="mental">
+      <h2 style="font-weight: 700;">Mental Health</h2>
+      <p style="font-size: 21px;">Taking care of your mental health is as important as physical health. Here are some key aspects of men's mental
+        health:</p>
+      <ul style="font-size: 21px;">
+        <li>Recognizing and managing stress</li>
+        <li>Practicing self-care and relaxation techniques</li>
+        <li>Building resilience and coping skills</li>
+        <li>Seeking support when needed</li>
+        <li>Prioritizing work-life balance</li>
+      </ul>
+      <div class="expandable-content">
+        <p style="font-size: 21px;">Here are some additional resources and tips for men's mental health:</p>
+        <ul style="font-size: 21px;">
+          <li>Practice stress management techniques such as deep breathing, meditation, or mindfulness exercises.</li>
+          <li>Engage in activities that bring you joy and relaxation, such as hobbies, sports, or spending time in
+            nature.</li>
+          <li>Develop healthy coping mechanisms for stress, such as talking to a trusted friend or family member,
+            journaling, or seeking professional help.</li>
+          <li>Prioritize self-care by getting enough sleep, eating nutritious meals, and taking breaks when needed.</li>
+          <li>Seek support from mental health professionals or support groups if you're experiencing difficulties or
+            facing mental health challenges.</li>
+          <li>Maintain a healthy work-life balance by setting boundaries, managing your time effectively, and taking
+            time off when necessary.</li>
+        </ul>
+      </div>
+      <p class="read-more-link" onclick="toggleContent('mental')">Read more</p>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p style="font-size: 21px;">If you have any questions, suggestions, or feedback, please feel free to contact us:</p>
+      <ul style="font-size: 21px;">
+        <li>Email: info@menshealth.com</li>
+        <li>Phone: 123-456-7890</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                       
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+{% load static %}
+<script src="{% static 'js folder/well_being.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

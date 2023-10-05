@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+       
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css folder/arm-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Arm Workout</title>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="c1 container-fluid"><br>
+        <div class="row">
+
+            <div class="col-sm-8 col-md-8 col-lg-9">
+                <h1 class="head">The Best Arm Workouts For Size, Strength & Beginners</h1>
+                <div class="p1"><i>Strong and defined arms do a whole lot more for your fitness than you might
+                        think.</i></div>
+                <hr>
+                <p class="p1">
+                    A pair of big arms can do a lot more for you than just grabbing attention at the beach. From bear
+                    hugs to
+                    bench press competitions, your biceps and triceps are involved in almost everything you do in and
+                    out of the
+                    gym. <br><br>While some will puff their chests and declare that they built their arms with pull-ups,
+                    presses,
+                    or — somehow — squatting, most lifters who have been in the game awhile will concede that if you
+                    want big
+                    arms, you have to train for big arms.
+                </p>
+                <img src="../static/image folder/armworkoutimg1.jpg" style="border: 2px solid black;" class="img-fluid" alt="img">
+                <br><br>
+                <h3 class="he1"><u>Best Arm Workout for Size</u></h3>
+                <p class="p1">When it comes to bodybuilding, if you were to ask five of the most successful competitors
+                    ever how
+                    they built their arms, you’d probably get five different — but valid — answers. Arnold himself was
+                    infamous
+                    for his grueling, superset-heavy high-volume biceps and triceps training. Dorian Yates, however,
+                    believed in
+                    pushing intensity as high as possible for fewer total sets. <br><br>
+                    Naturally, the best line to walk is probably straight down the middle. Whether it is your triceps or
+                    trapezius, the tenets of muscle growth are mostly the same. Train hard (but not too hard), pick the
+                    right
+                    exercises, and, most importantly, fuel your body well.
+                </p>
+                <h3 class="he1"><u>The Workout</u></h3>
+                <p class="p1">
+                    Since your arms have supporting roles in basically all upper body training, direct arm sessions
+                    needn’t be
+                    performed with extremely high frequency. Extra sessions might be helpful if you’re a particularly
+                    advanced
+                    trainee, but be sure to modulate your training volume accordingly. <br><br>
+
+                    These exercise selections are well-rounded suggestions, but remember that bodybuilding is highly
+                    individual.
+                    If you struggle to elicit a good contraction with an exercise, don’t force a square peg into a round
+                    hole.
+                    Substituting exercises that don’t serve you well can potentially spare you injury and keep you on
+                    the fast
+                    track to progress.
+                </p>
+                <p class="p1">
+                <ul>
+                    <li>Cheat Curl or Barbell Curl: 3 x 6, two minutes rest</li>
+                    <li>Incline Dumbbell Hammer Curl or Reverse Curl: 3 x 8 -10, 90 seconds rest</li>
+                    <li>Dumbbell Spider Curl or Preacher Curl: 2 x 12 – 15, 60 seconds rest</li>
+                    <li>Close-Grip Bench Press: 3 x 6 – 8, two minutes rest</li>
+                    <li>Cable Pressdown (V-Bar or Cambered Bar): 3 x 8 – 10, 90 seconds rest</li>
+                    <li>Rope Overhead Extension or Cable Kickback: 2 x 12 – 15, 60 seconds rest</li>
+                </ul>
+                </p>
+                <img src="../static/image folder/armworkoutimg2.jpg" style="border: 2px solid black;" class="img-fluid" alt="img">
+                <br><br>
+
+                <h3 class="he1"><u>Best Arm Workout for Strength</u></h3>
+                <p class="p1">
+                    If you’re more inclined towards pushing your limits with the barbell, direct arm work still merits a
+                    place in
+                    your routine. From a powerlifter’s bench press to a strongman’s Atlas stone lift, the arms play a
+                    critical
+                    role in strength sports. <br><br>
+
+                    The two main factors when integrating arm work into a strength routine are 1) the exercises should
+                    complement
+                    your primary lifts or activities, and 2) the training should not hamper your performance elsewhere.
+                    As such,
+                    perform this workout on its own day or after your primary training, and don’t be afraid to adjust
+                    volume as
+                    needed.
+                </p>
+                <p class="p1">
+                <ul>
+                    <li>Hammer Curl: 4 x 6, two minutes rest</li>
+                    <li>JM Press: 4 x 6, two minutes rest</li>
+                    <li>Reverse Preacher Curl: 2 x 10 – 12, 90 seconds rest</li>
+                    <li>Overhead Rope Extension: 2 x 12 – 15, 90 seconds rest</li>
+                    <li>Plate Pinch: 2-3 sets to failure, 60 seconds rest</li>
+                </ul>
+                </p>
+                <img src="../static/image folder/armworkoutimg5.jpg" style="border: 2px solid black;" class="img-fluid" alt="img">
+                <br><br>
+                <h3 class="he1"><u>Best Arm Workout for Beginners</u></h3>
+                <p class="p1">
+                    If you’re just getting started in the gym, you have a lot more going for you than you might think.
+                    Between
+                    rapid gains in strength, hypertrophy, work capacity, or even flexibility, your first few years of
+                    training are
+                    an embarrassment of riches. <br><br>
+
+                    That said, making the most of it is what matters. If you want your guns to be the most impressive
+                    part of your
+                    physique arsenal, a well-calibrated arm workout is your best friend in the weight room. <br><br>For
+                    exercise
+                    newbies, one of the best things about your training “economy” is your rate of return. In simple
+                    terms, this
+                    means that first-timers can get a lot out of a little. More volume and intensity will be required
+                    with more
+                    years of training under your lifting belt, but beginner programs should be lean and mean. <br><br>
+
+                    Perform this workout once per week to start, adding weight or reducing rest times as it gets easier.
+                <p class="p1">
+                <ul>
+                    <li>EZ-Bar Skull Crusher: 3 x 8, two minutes rest</li>
+                    <li>Standing Dumbbell Curl: 3 x 8, two minutes rest</li>
+                    <li>Dumbbell Overhead Extension: 2 x 10 – 12, 60 seconds rest</li>
+                    <li>EZ-Bar Reverse Curl: 2 x 12 – 15, 60 seconds rest
+                    </li>
+                </ul>
+                </p>
+                <img src="../static/image folder/armworkoutimg3.jpg" style="border: 2px solid black;" class="img-fluid" alt="img"><br><br>
+                <hr>
+                <div>&copy 2016 WELLnest, LLC. All rights reserved.</div><br>
+
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-3">
+                <div class="c4">
+                    <h4 class="he"><u>Latest News</u></h4><br>
+                    <div class="p2">
+                        The 2023 Shaw Classic Will Officially Crown “The Strongest Man on Earth”<br><br>
+                        <img src="../static/image folder/armworkoutimg4.jpg" style="border: 2px solid black;" class="img-fluid" alt="img"><br><br>
+                        Watch Jesse James West Learn To Train Chest with Bodybuilders Urs Kalecinski and Sadik Hadzovic
+                        <br><br>
+
+                        Discover Men’s Open Bodybuilder Hunter Labrada’s Push Day Six Weeks Out From Competition
+                        <br><br>
+                        2023 Lenda Murray Atlanta Pro Bodybuilding Show Results <br><br>
+                        2023 Vancouver Pro Bodybuilding Show Results — Hassan Mostafa Wins Men’s Open Title
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

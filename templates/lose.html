@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css folder/lose-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lose Weight</title>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="c1 container-fluid"><br>
+        <div class="row">
+
+            <div class="col-sm-8 col-md-8 col-lg-9">
+                <h1 class="head">Want to Lose Weight Fast?</h1>
+                <div class="p1"><i>These Science-Backed Tips Can Help You Lose Weight Sustainably</i></div>
+                <hr>
+                <p class="p1">
+                    For most people, a weight loss goal of 1–2 pounds per week is considered safe. Cutting carbs, eating
+                    more protein, lifting weights, and getting more sleep are all actions that can promote sustainable
+                    weight <br><br>Weight loss is not the answer to every health problem, but if your doctor recommends
+                    it, there are tips to help you lose weight safely. A steady weight loss of 1 to 2 pounds per week is
+                    recommended for the most effective long-term weight management.
+                </p>
+                <img src="../static/image folder/loseimg1.jpg" style="border: 2px solid black;" class="img-fluid" alt="img">
+                <br><br>
+                <h3 class="he1">1. <u>Cut back on refined carbs</u></h3>
+                <p class="p1">One way to help lose weight quickly is to cut back on sugars and starches, or
+                    carbohydrates. This could be with a low carb eating plan or by reducing refined carbs and replacing
+                    them with whole <br><br>When you do that, your hunger levels go down, and you generally end up
+                    eating fewer caloriesWith a low carb eating plan, you will utilize burning stored fat for energy
+                    instead of <br><br>If you choose to eat more complex carbs like whole grains along with a calorie
+                    deficit, you’ll benefit from higher fiber and digest them more slowly. This makes them more filling
+                    to keep you satisfied.
+                </p>
+                <h3 class="he1">2. <u>Eat protein, fat, and vegetables</u></h3>
+                <p class="p1">
+                    Eating a recommended amount of protein is essential to help preserve your health and muscle mass
+                    while losing weight <br>
+
+                <p class="p1">
+                <ul>
+                    <li>0.8g/kg of body weight</li>
+                    <li>1-1.2g/kg of body weight for people 65 and older</li>
+                    <li>1.4-2g/kg of body weight for athletes</li>
+                </ul>
+                </p>
+                <p class="p1">Healthy protein sources include:</p>
+                <ul>
+                    <li>meat: beef, chicken, pork, and lamb</li>
+                    <li>fish and seafood: salmon, trout, sardines, and shrimp</li>
+                    <li>eggs</li>
+                    <li>plant-based proteins: beans, legumes, quinoa, tempeh, and tofu</li>
+                </ul>
+                </p>
+
+                <p class="p1">Don’t be afraid to load your plate with leafy green vegetables. They’re packed with
+                    nutrients, and you can eat very large amounts without greatly increasing calories and carbs.
+                <p class="p1">Your body still requires healthy fats no matter what eating plan you choose. Olive oil and
+                    avocado oil are great choices for including in your eating plan. Nuts, seeds, olives, and avocados
+                    are delicious and healthy additions, as well.</p>
+                </p><img src="../static/image folder/loseimg2.jpg" style="border: 2px solid black;" class="img-fluid" alt="img">
+                <br><br>
+                <p></p>
+
+                <h3 class="he1">3. <u>Move your body</u></h3>
+                <p class="p1">
+                    Exercise, while not required to lose weight, can help you lose weight more quickly. Lifting weights
+                    has particularly good benefits.
+
+                    By lifting weights, you’ll burn calories and help prevent your metabolism from slowing down, which
+                    is a common side effect of losing weight. <br><br>
+
+                    Try strength training three to four times a week. If you’re new to lifting weights, a trainer may be
+                    able to help you get started. Make sure your doctor is also aware of any new exercise plans.
+
+                    If lifting weights is not an option for you, doing some cardio workouts such as walking, jogging,
+                    running, cycling, or swimming is very beneficial for weight loss and general health.
+
+                    Both cardio and weightlifting may help with weight loss and offer lots of other health benefits.
+                </p>
+
+                <img src="../static/image folder/loseimg3.jpg" style="border: 2px solid black;" class="img-fluid" alt="img" height="60%">
+                <br><br>
+                <h3 class="he1"><u><b>9 Weight Loss Tips</b></u></h3>
+                <p class="p1">
+                <ul>
+                    <li>Eat a high protein breakfast. Eating a high protein breakfast could help reduce cravings and
+                        calorie intake throughout the day</li>
+                    <li>Limit sugary drinks and fruit juice. Empty calories from sugar aren’t useful to your body and
+                        can hinder weight loss </li>
+                    <li>Stay hydrated. Drink water throughout the day and aim for half your body weight in ounces </li>
+                    <li>Choose weight-loss-friendly foods. Some foods are better for weight loss than others. Here is a
+                        list of healthy weight-loss-friendly foods.</li>
+                    <li>Eat more fiber. Studies show that eating fiber may promote weight loss. Find fiber in whole
+                        grains, fruits, vegetables, nuts, seeds and these other high-fiber foods.</li>
+                    <li>Drink coffee or tea. Caffeine consumption may help boost your metabolism. No need to go
+                        overboard on caffeine though and be mindful of adding sugar to these drinks.</li>
+                    <li>Base your diet on whole foods. They tend to be nutrient rich, more filling, and less likely to
+                        cause overeating than processed foods.</li>
+                    <li>Eat slowly. Eating quickly can lead to weight gain over time, while eating slowly makes you feel
+                        more full and boosts weight-reducing hormones</li>
+                    <li>Get good quality sleep. Sleep is important for many reasons, and poor sleep is one of the
+                        biggest risk factors for weight gain.</li>
+                </ul>
+                </p>
+                <img src="../static/image folder/loseimg4.jpg" style="border: 2px solid black;" class="img-fluid" alt="img" width="85%"
+                    height="50%"><br><br>
+                <hr>
+                <div>&copy 2016 WELLnest, LLC. All rights reserved.</div><br>
+
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-3">
+                <div class="c4">
+                    <h4 class="he"><u>Some Tips</u></h4><br>
+                    <div class="p2">
+                        <div class="p2">
+                            <b>Set realistic goals: </b> Start with small, achievable goals to avoid feeling
+                            overwhelmed. Gradual progress is more sustainable in the long run.<br><br>
+                            <b>Portion control: </b> Be mindful of portion sizes. Use smaller plates and bowls to help
+                            control your portions and avoid overeating.<br><br>
+                            <b>Eat balanced meals:</b> Include a variety of nutrient-rich foods such as fruits,
+                            vegetables, whole grains, lean proteins, and healthy fats in your meals. <br><br>
+                            <b>Listen to your body: </b> Pay attention to your body's signals and adjust your workouts
+                            accordingly.<br><br>
+                            <b>Mindful eating: </b> Pay attention to your body's hunger and fullness cues.
+                            <br><br>
+                            <b>Get enough sleep: </b> Aim for 7-9 hours of quality sleep each night. Lack of sleep can
+                            disrupt your metabolism and increase cravings for unhealthy foods.<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

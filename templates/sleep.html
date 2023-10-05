@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleep</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+  integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css folder/style-sleep.css' %}">
+
+</head>
+
+<body>
+  <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+    <div class="container">
+        <a class="navbar-brand"  href="{% url 'about' %}">
+            <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Workout
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                        <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Well Being
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                Health</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                >Weight-management</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                Health</a></li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'womens' %}">Women's health</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                    </li>
+                        
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+  <p class="title">sleep</p>
+  <div class="big-container">
+    <div class="left-container">
+      <div class="box box2 ">
+        <center><img src="../static/image folder/sleepfirst.jpg" alt="" height="38%" width="70%">
+          <br>
+          <p>Sleep is an essential aspect of our lives that often goes overlooked or undervalued. </p>
+
+        </center>
+      </div>
+      <div class="box  boxn">
+        <p> In today's fast-paced world, where productivity and efficiency are highly prized, it's crucial to understand
+          the profound impact that quality sleep can have on our overall well-being and performance. This article delves
+          into the significance of sleep, exploring its benefits, tips for improving sleep hygiene, and the potential
+          consequences of sleep deprivation. Discover how a good night's sleep can be a transformative factor in
+          unlocking your full potential.</p>
+        <ul>
+          <li><b>Enhanced Cognitive Function:</b> Adequate sleep strengthens memory, attention, problem-solving
+            abilities, and decision-making skills. It promotes better focus, concentration, and overall cognitive
+            performance.</li>
+          <li><b>Physical Restoration:</b> Sleep plays a crucial role in repairing and rejuvenating our bodies. It
+            supports muscle growth and repair, hormone regulation, immune function, and the healing of injuries.</li>
+          <li><b>Emotional Balance: </b>Sufficient sleep helps regulate our emotions, reducing the risk of mood
+            disorders such as anxiety and depression. It also improves our ability to manage stress and cope with daily
+            challenges.</li>
+          <li><b>Boosted Creativity:</b> REM (Rapid Eye Movement) sleep, a stage of deep sleep, has been linked to
+            enhanced creative thinking and problem-solving abilities. It can foster innovation and ingenuity in various
+            aspects of life.</li>
+        </ul>
+
+      </div>
+
+      <div class="box box1">
+        <div class="bubbleimg">
+          <div class="card">
+            <img src="../static/image folder/sleeps letter.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/sleepl letter.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/sleepe letter.png ">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/sleepe letter.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/sleepp letter.png">
+          </div>
+        </div>
+      </div>
+      <div class="box boxn ">
+
+        <p>Tips for Better Sleep Hygiene:</p><br><br>
+        <ul>
+          <li>Establish a consistent sleep schedule.</li>
+          <br>
+          <li>Create a sleep-friendly environment: cool, quiet, and dark.</li>
+          <br>
+          <li>Engage in relaxing activities before bed.</li>
+          <br>
+          <li>Limit caffeine and alcohol consumption.</li>
+          <br>
+          <li>Exercise regularly but avoid intense exercise close to bedtime.</li>
+          <br>
+          <li>Mind your diet and avoid heavy meals or liquids before bed.</li>
+        </ul>
+        </ul>
+      </div>
+
+      <div class="box box5 ">
+        <div id="slides">
+          <input checked type="radio" name="slider" id="slide1" class="set" />
+          <input type="radio" name="slider" id="slide2" class="set" />
+          <input type="radio" name="slider" id="slide3" class="set" />
+          <input type="radio" name="slider" id="slide4" class="set" />
+
+          <div class="mask">
+            <div class="overflow">
+
+              <div class="slide">
+                <img src="../static/image folder/sleep-slide1.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/sleep-slide2.jpeg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/sleep-slide3.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/sleep-slide4.jpg" alt="image" />
+              </div>
+
+            </div>
+          </div>
+
+          <div id="controls" onclick="">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+          </div>
+          <center>how much sleep we need?</center>
+        </div>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/sleepdiv-img1.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Infants and Toddlers:</dt>
+        <dd>Infants (0-11 months) require 12-15 hours of sleep per day to support their rapid growth and development,
+          while toddlers (1-2 years) benefit from 11-14 hours of sleep, promoting physical and cognitive development
+          during this crucial stage of their early years.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/sleepdiv-img2.jpeg"alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>School-Age Children and Teenagers:</dt>
+        <dd>School-age children (6-13 years) should aim for 9-11 hours of sleep, which enhances their learning, memory,
+          and overall well-being, while teenagers (14-17 years) should prioritize 8-10 hours of sleep to support their
+          physical growth</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/sleepdiv-img3.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Young Adults and Adults:</dt>
+        <dd>Young adults (18-25 years) should aim for 7-9 hours of sleep, as it enhances cognitive function,
+          productivity, and overall health. Similarly, adults (26-64 years) benefit from 7-9 hours of sleep, which
+          promotes physical health, mental acuity, and emotional well-being.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/sleepdiv-img4.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Older Adults:</dt>
+        <dd>Older adults (65+ years) should aim for 7-8 hours of sleep to support cognitive function, memory, and
+          overall well-being. Consistent sleep routines and addressing sleep issues are important for maintaining
+          optimal health in this age group.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/sleepdiv-img5.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Individual Variations:</dt>
+        <dd>While sleep recommendations provide general guidelines, individual variations exist, and it's important to
+          adjust sleep duration based on personal signals. Prioritizing adequate, quality sleep is essential for
+          supporting individual well-being.</dd>
+      </div>
+      <div class="box boxn ">
+        <p>Insufficient sleep or chronic sleep deprivation can have significant consequences on our physical and mental
+          well-being. Here are a few potential outcomes of inadequate sleep:</p>
+        <ul>
+          <br>
+          <li>Decreased productivity and impaired cognitive abilities.</li>
+          <br>
+          <li>Increased health risks: obesity, diabetes, cardiovascular disease, weakened immune function.</li>
+          <br>
+          <li>Impact on mental health: anxiety, depression.</li>
+          <br>
+          <li>Strained relationships due to mood swings and difficulties managing emotions.</li>
+          <br>
+          <li>Safety hazards: increased risk of accidents and errors.</li>
+
+        </ul>
+      </div>
+      <div class="box boxn ">
+        <br>
+        <p>Conclusion:</p>
+        <br><br>
+        <p>Sleep should be recognized as an essential pillar of overall well-being, productivity, and personal growth.
+          By prioritizing quality sleep, adopting healthy sleep habits, and understanding the potential consequences of
+          sleep deprivation, you can unlock your full potential and lead a more fulfilling life. Remember, a good
+          night's sleep is not a luxury but a necessity for achieving optimal physical, cognitive, and emotional
+          functioning. Make sleep a priority and reap the countless benefits it has to offer.</p>
+
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-dep1.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep Debt</b></p>
+        <p> If you consistently get less sleep than your body needs, it accumulates a sleep debt. This debt cannot be
+          fully repaid by sleeping longer on the weekends alone. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-cyc2.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep Cycles</b></p>
+        <p>A complete sleep cycle lasts around 90-120 minutes and includes both NREM and REM sleep stages. On average, a
+          person experiences 4-6 complete sleep cycles in a night.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-walk3.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleepwalking</b></p>
+        <p> Sleepwalking, also known as somnambulism, is a sleep disorder that causes individuals to engage in complex
+          behaviors while asleep. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-para4.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep Paralysis</b></p>
+        <p>Sleep paralysis is a temporary inability to move or speak that occurs when falling asleep or waking up.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-dream5.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep and Dreaming</b></p>
+        <p> it is believed to play a role in memory consolidation, emotional processing, and problem-solving.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-growth6.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep and Growth</b></p>
+        <p>Growth hormone production is highest during deep sleep stages, particularly in children and adolescents.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-cre7.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep and Creativity</b></p>
+        <p> It helps in connecting unrelated information and forming novel associations, leading to increased creative
+          insights.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-age8.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep and Aging</b></p>
+        <p> Older adults may experience more fragmented sleep, lighter sleep, and an increased incidence of sleep
+          disorders. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-pro9.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Sleep and Productivity</b></p>
+        <p> Getting enough sleep is essential for productivity and cognitive performance. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-dis10.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sleep Disorders</b></p>
+        <p>There are various sleep disorders, including insomnia, sleep apnea, narcolepsy.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-rhy11.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Circadian Rhythm</b></p>
+        <p> The sleep-wake cycle is regulated by the body's internal clock, known as the circadian rhythm. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/sleep-color12.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Dreams in Color</b></p>
+        <p> While it was once thought that most dreams were in black and white, research suggests that the majority of
+          dreams actually contain vivid colors. </p>
+      </div>
+    </div>
+  </div>
+  <div class="last">
+    <center><img src="../static/image folder/last-sleep.jpg" alt=""></center>
+  </div>
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                        
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static 'js folder/explore.js' %}"></script>
+</body>
+
+</html>

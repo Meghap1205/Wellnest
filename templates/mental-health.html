@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menatl_health</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+  integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css folder/style-mental-health.css' %}">
+
+</head>
+
+<body>
+  <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+    <div class="container">
+        <a class="navbar-brand"  href="{% url 'about' %}">
+            <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Workout
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                        <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Well Being
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                Health</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                >Weight-management</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                Health</a></li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'womens' %}">Women's health</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                    </li>
+                        
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+  <p class="title">mental health</p>
+  <div class="big-container">
+    <div class="left-container">
+      <div class="box box2 ">
+        <center><img src="../static/image folder/mfirst.jpeg" alt="" height="25%" width="70%">
+
+        </center>
+      </div>
+      <div class="box  boxn">
+        <p>Mental health refers to our emotional, psychological, and social well-being. It affects how we think, feel,
+          and act, and it plays a significant role in our overall functioning and quality of life. Mental health
+          encompasses a broad range of conditions, from common disorders like anxiety and depression to more severe
+          conditions such as schizophrenia and bipolar disorder.</p>
+        <p>Taking care of our mental health is essential for maintaining a balanced and fulfilling life. Just as we
+          prioritize our physical health by eating well and exercising, it's crucial to cultivate habits and practices
+          that support our mental well-being. This includes engaging in self-care activities, seeking social support,
+          practicing mindfulness and stress reduction techniques, and seeking professional help when needed.</p>
+        <p>It's important to remember that mental health is a continuum, and everyone experiences ups and downs in their
+          mental well-being. Just as we wouldn't hesitate to seek medical help for a physical ailment, it's equally
+          vital to seek support when we're struggling mentally. Mental health services, such as therapy and counseling,
+          can provide valuable guidance and tools to help individuals navigate their challenges and develop coping
+          strategies.</p>
+      </div>
+
+      <div class="box box1">
+        <div class="bubbleimg">
+          <div class="card">
+            <img src="../static/image folder/mn1.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/mn2.jpg">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/mn3.jpg">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/mn4.png">
+          </div>
+        </div>
+      </div>
+      <div class="box boxn ">
+        <ul>
+          <br>
+          <li>Mental health refers to our emotional, psychological, and social well-being, and it affects how we think,
+            feel, and behave.</li>
+          <br>
+          <li>Mental health is just as important as physical health and plays a crucial role in our overall well-being
+            and quality of life.</li>
+          <br>
+          <li>Mental health conditions can range from common disorders like anxiety and depression to more severe
+            conditions like schizophrenia and bipolar disorder.</li>
+          <br>
+          <li>Taking care of our mental health involves practicing self-care, seeking social support, and adopting
+            healthy coping mechanisms.</li>
+          <br>
+          <li>Seeking professional help, such as therapy and counseling, is essential for individuals experiencing
+            mental health challenges.</li>
+        </ul>
+        </ul>
+      </div>
+
+      <div class="box box5 ">
+        <div id="slides">
+          <input checked type="radio" name="slider" id="slide1" class="set" />
+          <input type="radio" name="slider" id="slide2" class="set" />
+          <input type="radio" name="slider" id="slide3" class="set" />
+          <input type="radio" name="slider" id="slide4" class="set" />
+
+          <div class="mask">
+            <div class="overflow">
+
+              <div class="slide">
+                <img src="../static/image folder/mslide1.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/mental-healthslide2.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/mental-healthslide3.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/mental-healthslide4.jpg" alt="image" />
+              </div>
+
+            </div>
+          </div>
+
+          <div id="controls" onclick="">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+          </div>
+          <center>there are many types of mental health disorder</center>
+        </div>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/mdiv1.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>stress</dt>
+        <dd>Stress is a natural response to demanding or challenging situations. It can be caused by various factors
+          such as work pressure, relationship difficulties, or financial problems.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/mdiv2.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Depression</dt>
+        <dd>Depression is a mood disorder characterized by sadness, loss of interest, and changes in appetite and sleep.
+          It can impair daily functioning and lead to negative thoughts or feelings of worthlessness.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/mdiv3.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Anxiety </dt>
+        <dd>Anxiety disorders involve excessive worry and fear. Generalized anxiety disorder causes persistent worry and
+          physical symptoms. Panic disorder leads to sudden and intense panic attacks.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/mdiv4.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Bipolar Disorder</dt>
+        <dd>Bipolar disorder involves extreme mood swings, including manic episodes with elevated mood and depressive
+          episodes with low mood. It affects thoughts, emotions, and behavior.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/mdiv5.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Post-Traumatic Stress Disorder (PTSD)</dt>
+        <dd>PTSD can develop after experiencing or witnessing a traumatic event. It involves distressing thoughts,
+          flashbacks, nightmares, and heightened arousal, impacting daily functioning.</dd>
+      </div>
+      <div class="box boxn ">
+        <p>Taking care of mental health is essential for overall well-being. Here are some practices to support mental
+          health:</p>
+        <ul>
+          <br>
+          <li>Practice Self-Care: Engage in activities that bring you joy and relaxation, such as hobbies, reading, or
+            taking a walk in nature. Prioritize self-care and make time for activities that recharge and rejuvenate you.
+          </li>
+          <br>
+          <li>Maintain a Balanced Lifestyle: Establish a routine that includes regular exercise, a healthy diet, and
+            sufficient sleep. Physical well-being contributes to mental well-being.</li>
+          <br>
+          <li>Cultivate Supportive Relationships: Build and nurture positive relationships with family, friends, and
+            support networks.</li>
+          <br>
+          <li>Manage Stress: Develop effective stress management techniques, such as mindfulness meditation, deep
+            breathing exercises, or journaling.</li>
+          <br>
+          <li>Limit Digital Overload: Set boundaries on screen time and social media use. Take breaks from technology to
+            foster present-moment awareness and reduce information overload.</li>
+
+        </ul>
+      </div>
+      <div class="box boxn ">
+        <ul>
+          <br>
+          <li>Engage in Positive Self-Talk: Challenge negative thoughts and replace them with positive and empowering
+            self-talk. Practice self-compassion and treat yourself with kindness and understanding.</li>
+          <br>
+          <li>Engage in Activities That Promote Mental Well-being: Engage in activities that promote mental well-being,
+            such as pursuing hobbies, volunteering, practicing gratitude, or engaging in creative outlets.</li>
+        </ul><br><br>
+        <p>Remember, everyone's mental health journey is unique. It's important to find what works best for you and seek
+          professional help when needed. Prioritize your mental health and make it a priority in your daily life.</p>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m1.png" alt="" class="card-img-top"></div>
+        <p><b>Mental Health Matters</b></p>
+        <p> Mental health is just as important as physical health</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m2.jpg" alt="" class="card-img-top"></div>
+        <p><b>Common Mental Health Disorders</b></p>
+        <p> Conditions like anxiety, depression, and bipolar disorder affect millions of people worldwide.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m3.png" alt="" class="card-img-top"></div>
+        <p><b>Stigma and Discrimination</b></p>
+        <p>Society's negative attitudes and misconceptions about mental health can create barriers to seeking help and
+          support.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m4.jpg" alt="" class="card-img-top"></div>
+        <p><b>Mental Health Across Lifespan</b></p>
+        <p>Mental health issues can occur at any age, from childhood to old age, and require appropriate care and
+          attention.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m5.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Impact on Physical Health</b></p>
+        <p> Mental health problems can have physical consequences, contributing to conditions such as cardiovascular
+          disease and chronic pain.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m6.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Treatments and Therapies</b></p>
+        <p> Various evidence-based approaches, including therapy, medication, and lifestyle changes.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m7.jpg" alt="" class="card-img-top"></div>
+        <p><b>Importance of Self-Care</b></p>
+        <p>Self-care practices like exercise, adequate sleep, and stress management play a vital role.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m8.jpg" alt="" class="card-img-top"></div>
+        <p><b>Socioeconomic Factors</b></p>
+        <p>Poverty, unemployment, and lack of access to healthcare can significantly impact mental health outcomes.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m9.png" alt="" class="card-img-top"></div>
+        <p><b>Mental Health in the Workplace</b></p>
+        <p>Promoting a supportive work environment and addressing workplace stress can enhance mental well-being.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m10.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Connection to Substance Abuse</b></p>
+        <p> Substance abuse often co-occurs with mental health disorders.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m11.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Suicide Prevention</b></p>
+        <p>Suicidal thoughts and behaviors are alarming signs of mental distress.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/m12.jpg" alt="" class="card-img-top"></div>
+        <p><b>Advocacy and Awareness</b></p>
+        <p> Increasing awareness, reducing stigma, and advocating for mental health resources.</p>
+      </div>
+    </div>
+  </div>
+  <div class="last">
+    <center><img src="../static/image folder/mlast.jpg" alt=""></center>
+  </div>
+
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                       
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+
+  {% load static %}
+  <script src="{% static 'js folder/explore.js' %}"></script>
+</body>
+
+</html>

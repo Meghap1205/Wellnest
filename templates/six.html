@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/six-style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home Workout</title>
+</head>
+
+<body>
+
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+  <div class="c1 container-fluid"><br>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-3">
+            <div class="c4">
+              <h4 class="he"><u>Some Tips</u></h4><br>
+              <div class="p2">
+                <img src="../static/image folder/siximg3.jpg" style="border: 2px solid black;" class="img-fluid" alt="img"><br><br>
+                <b>Focus on nutrition: </b> A healthy, balanced diet is crucial for reducing body fat and revealing your abdominal muscles.<br><br>
+                <b>Calorie control:  </b>Monitor your calorie intake and ensure you're not consuming excessive calories. Remember, even if you have strong abs, they won't be visible if they're covered by a layer of fat.<br><br>
+                <b>High-protein diet:</b> Include an adequate amount of protein in your diet to support muscle growth and recovery. <br><br>
+                <b>Strength training:</b>  Incorporate strength training exercises that target your abdominal muscles, such as crunches, planks, bicycle crunches, and leg raises.<br><br>
+                <b>Hydration:  </b> Stay properly hydrated throughout the day as it supports overall health and can aid in digestion and weight management. <br><br>
+                <b>Include rest days: </b>  Rest and recovery are essential for allowing your body to repair and grow stronger. Incorporate rest days into your routine to prevent overtraining and give your muscles time to recuperate.<br><br>
+              </div>
+            </div>
+          </div>
+
+      <div class="col-sm-8 col-md-8 col-lg-9">
+        <h1 class="head">Want Six Pack?</h1>
+        <div class="p1"><i> I can help you with a home workout routine. Here's a basic workout plan that you can follow:</i></div>
+        <hr>
+        <img src="../static/image folder/siximg1.jpg" style="border: 2px solid black;" class="img-fluid" alt="img"><br><br>
+        <h3 class="he1">1. <u>Lower your body fat percentage:</u></h3>
+        <p class="p1">
+            Achieving a visible six-pack requires having a low body fat percentage. To accomplish this, focus on maintaining a consistent calorie deficit through a combination of diet and exercise. Monitor your calorie intake and ensure you're burning more calories than you consume.
+        </p>
+        <h3 class="he1">2. <u>Increase cardiovascular exercise:</u></h3>
+        <p class="p1">
+            Incorporate high-intensity cardio workouts into your routine to burn calories and accelerate fat loss. Activities like sprinting, interval training, and high-intensity interval training (HIIT) can be effective for shedding excess body fat.
+        </p>
+        <h3 class="he1">3. <u>Incorporate compound exercises:</u></h3>
+        <p class="p1">
+            While direct ab exercises are important, don't overlook compound exercises that engage multiple muscle groups. Exercises such as squats, deadlifts, bench presses, and overhead presses not only help build overall strength but also activate the core muscles, including the abs.
+        </p>
+        <h3 class="he1">4. <u>Focus on progressive overload:</u></h3>
+        <p class="p1">
+            To develop well-defined abs, gradually increase the intensity and resistance of your abdominal exercises over time. This could involve adding weights, increasing repetitions, or trying more challenging variations of exercises like planks or sit-ups.
+        </p>
+        <h3 class="he1">5. <u>Train your entire core: </u></h3>
+        <p class="p1">
+            While the rectus abdominis muscles (the "six-pack" muscles) are essential, don't neglect the other muscles that make up your core, such as the obliques and transverse abdominis. Incorporate exercises that target these muscle groups, like side planks, Russian twists, and woodchoppers.
+        </p>
+        <h3 class="he1">6. <u>Prioritize abdominal exercises: </u></h3>
+        <p class="p1">
+            Include specific ab exercises in your workout routine to directly target and strengthen your abdominal muscles. Effective exercises include crunches, reverse crunches, leg raises, bicycle crunches, and the plank.
+        </p>
+        <h3 class="he1">7. <u>Maintain proper form:</u></h3>
+        <p class="p1">
+            When performing abdominal exercises, focus on maintaining proper form and technique. Poor form can lead to ineffective workouts or even injury. Engage your core, avoid straining your neck or back, and perform each exercise with control and precision.
+        </p>
+        <h3 class="he1">8. <u>Get enough rest and recovery: </u></h3>
+        <p class="p1">
+            Allow your muscles to recover and grow stronger by incorporating rest days into your routine. Overtraining can hinder progress, so aim for balanced workouts that include both challenging sessions and adequate rest.
+        </p>
+        <h3 class="he1">9. <u>Stay consistent and patient: </u></h3>
+        <p class="p1">
+            Developing a visible six-pack takes time, consistency, and dedication. Stay committed to your exercise and nutrition plan, and be patient with your progress. Remember that everyone's journey is unique, and results may vary.
+        </p>
+        <h3 class="he1">10. <u>Seek professional guidance:  </u></h3>
+        <p class="p1">
+            Consider consulting with a fitness professional, such as a personal trainer or strength coach, who can provide personalized guidance and design a specific plan tailored to your goals and needs.
+        </p>
+        <p class="p1">Remember, individual results may vary, and it's essential to prioritize overall health, body positivity, and sustainable habits throughout your fitness journey.</p><br><br>
+        <img src="../static/image folder/siximg2.jpg" style="border: 2px solid black;" class="img-fluid" alt="img"><br><br>
+        
+
+
+        <hr>
+        <div>&copy 2016 WELLnest, LLC. All rights reserved.</div><br>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                       
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

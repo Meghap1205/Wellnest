@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/style-fitness.css' %}">
+<style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <p class="title">fitness</p>
+    <div class="big-container">
+        <div class="left-container">
+            <div class="box box2 ">
+                <center><img src="../static/image folder/fitnessffirst.jpg" alt="" height="55%" width="70%">
+                    <br><br>
+                    <p>Fitness is a dynamic and multifaceted concept that encompasses physical, mental, and emotional
+                        well-being. It involves engaging in regular physical activity, adopting healthy lifestyle
+                        choices, and maintaining a balanced approach to overall health.</p>
+                </center>
+            </div>
+            <div class="box  boxn">
+                <p>benefits of fitness.</p>
+                <ul>
+                    <br>
+                    <li><strong>Enhanced Mental Well-being:</strong>Fitness activities, including exercise and physical
+                        activity, release endorphins in the brain, which act as natural mood elevators and reduce
+                        feelings of stress, anxiety, and depression. Regular exercise promotes better sleep patterns,
+                        boosts self-confidence, and improves overall mental well-being. </li>
+                    <br>
+                    <li><strong>Increased Energy Levels:</strong>Engaging in fitness activities regularly helps improve
+                        stamina, endurance, and energy levels. Physical exercise stimulates blood flow, delivering
+                        oxygen and nutrients to the muscles and tissues, which in turn increases energy production and
+                        reduces fatigue. </li>
+                    <br>
+                    <li><strong>Disease Prevention and Management:</strong> Fitness plays a crucial role in preventing
+                        and managing various chronic diseases such as cardiovascular diseases, type 2 diabetes, certain
+                        types of cancer, and osteoporosis. Regular physical activity strengthens the immune system,
+                        improves heart health, regulates blood sugar levels, and maintains bone density. </li>
+
+                </ul>
+            </div>
+
+            <div class="box box1">
+                <div class="bubbleimg">
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-f.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-i.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-t.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-n.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-e.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-s.png">
+                    </div>
+                    <div class="card">
+                        <img src="../static/image folder/fitnessf-s.png">
+                    </div>
+                </div>
+            </div>
+            <div class="box boxn ">
+                <ul><br>
+                    <br>
+                    <li><strong>Improved Cognitive Function: </strong>Fitness activities have a positive impact on brain
+                        health and cognitive function. Exercise promotes the growth of new neurons, improves memory,
+                        attention span, and cognitive abilities. It also reduces the risk of age-related cognitive
+                        decline and enhances overall brain health. </li>
+                    <br>
+                    <li><strong>Longevity and Quality of Life: </strong>Adopting a fit and active lifestyle has been
+                        associated with increased longevity and improved quality of life. Regular exercise and physical
+                        activity contribute to maintaining healthy body weight, reducing the risk of chronic diseases,
+                        improving mobility, and promoting independence as we age. </li>
+                </ul>
+                <br><br>
+                <p>Remember, it's important to consult with a healthcare professional before starting any fitness
+                    regimen and to find activities that align with your abilities and preferences.</p>
+            </div>
+
+            <div class="box box5 ">
+                <div id="slides">
+                    <input checked type="radio" name="slider" id="slide1" class="set" />
+                    <input type="radio" name="slider" id="slide2" class="set" />
+                    <input type="radio" name="slider" id="slide3" class="set" />
+                    <input type="radio" name="slider" id="slide4" class="set" />
+
+                    <div class="mask">
+                        <div class="overflow">
+
+                            <div class="slide">
+                                <img src="../static/image folder/fitnessfslide1.jpg" alt="image" />
+                            </div>
+                            <div class="slide">
+                                <img src="../static/image folder/fitnessfslide2.jpg" alt="image" />
+                            </div>
+                            <div class="slide">
+                                <img src="../static/image folder/fitnessfslide3.jpg" alt="image" />
+                            </div>
+                            <div class="slide">
+                                <img src="../static/image folder/fitnessfslide4.jpg" alt="image" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="controls" onclick="">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                    </div>
+                    <center>different forms for fitness</center>
+                </div>
+            </div>
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv1.png" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Cardiovascular Fitness:</dt>
+                    <dd>Also known as aerobic or cardio exercise, this type of fitness focuses on improving the cardiovascular system. It includes activities such as running, swimming, cycling, brisk walking, and dancing.These exercises increase heart rate, improve lung capacity, and enhance endurance.</dd>
+            </div>
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv2.jpeg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Strength Training:</dt>
+                    <dd>Strength training, also known as resistance or weight training, involves using external resistance, such as dumbbells, barbells, or resistance bands, to build muscle strength and endurance. This type of fitness helps increase lean muscle mass, improve bone density, and boost metabolism.</dd>
+            </div>
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv3.jpeg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Flexibility Training:</dt>
+                    <dd>Flexibility training focuses on improving joint range of motion and muscle elasticity. Stretching exercises, yoga, and Pilates are examples of activities that promote flexibility, helping to prevent injuries, improve posture, and enhance overall movement.</dd>
+            </div>
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv4.jpg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Balance and Stability Training:</dt>
+                    <dd>Balance and stability exercises aim to improve coordination, proprioception, and body control. These activities help prevent falls, particularly in older adults, and enhance sports performance. Examples include yoga, tai chi, and specific balance drills.</dd>
+            </div>
+            
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv5.jpg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>High-Intensity Interval Training (HIIT):</dt>
+                    <dd>HIIT workouts involve alternating periods of high-intensity exercise with short recovery periods. This type of fitness training is known for its efficiency and effectiveness in improving cardiovascular fitness, burning calories, and boosting metabolism.</dd>
+            </div>
+            
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv6.jpg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Functional Fitness:</dt>
+                    <dd>Functional fitness exercises mimic movements performed in daily activities or sports. They focus on building strength, flexibility, and endurance that directly translate to everyday tasks. Examples include squats, lunges, pushing, pulling, and lifting.</dd>
+            </div>
+            
+            <div class="box boxn ">
+                <dl>
+                    <center>
+                        <div class="imghover">
+                            <img src="../static/image folder/fitnessfdiv7.jpeg" alt="...">
+                        </div>
+                    </center>
+                    <br>
+                    <hr><br>
+                    <dt>Group Fitness:</dt>
+                    <dd>Group fitness classes provide a social and motivational setting for individuals to engage in exercise together. Classes such as aerobics, Zumba, spinning, and boot camps offer a structured and energetic environment for fitness enthusiasts of all levels.</dd>
+            </div>
+
+        </div>
+        <div class="right-container">
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg1.jpg" alt="" class="card-img-top"></div>
+                <p><b>Exercise Boosts Brain Power</b></p>
+                <p> Physical activity enhances cognitive function, improving memory, attention, and problem-solving
+                    abilities.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg2.png" alt="" class="card-img-top"></div>
+                <p><b>Music Enhances Performance</b></p>
+                <p> Listening to upbeat music during a workout can increase endurance and motivate individuals to push
+                    their limits.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg3.jpg" alt="" class="card-img-top"></div>
+                <p><b>Strength Training Burns Calories</b></p>
+                <p> Lifting weights not only builds muscle but also increases metabolism, helping the body burn more
+                    calories even at rest.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg4.png"alt="" class="card-img-top"></div>
+                <p><b>Active Commuting Improves Health</b></p>
+                <p> Walking, biking, or using public transportation instead of driving can significantly improve
+                    cardiovascular health.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg5.jpeg" alt="" class="card-img-top"></div>
+                <p><b>Flexibility Enhances Joint Health</b></p>
+                <p> Incorporating stretching exercises into your routine improves flexibility, reducing the risk of
+                    injuries.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg6.jpg" alt="" class="card-img-top"></div>
+                <p><b>Exercise Reduces Stress</b></p>
+                <p> Engaging in physical activity releases endorphins, which act as natural stress relievers and boost
+                    mood.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg7.png" alt="" class="card-img-top"></div>
+                <p><b>HIIT Maximizes Efficiency</b></p>
+                <p>High-Intensity Interval Training (HIIT) combines short bursts of intense exercise with brief recovery
+                    periods.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg8.jpeg" alt="" class="card-img-top"></div>
+                <p><b>Exercise and Aging</b></p>
+                <p>Regular physical activity can help prevent age-related decline, preserving muscle mass, bone density.
+                </p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg9.jpeg" alt="" class="card-img-top"></div>
+                <p><b>Socializing Through Fitness</b></p>
+                <p> Participating in group workouts or team sports promotes social interaction, motivation, and overall
+                    well-being.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg10.png" alt="" class="card-img-top"></div>
+                <p><b>Consistency is Key</b></p>
+                <p>Consistent exercise over time yields the most significant health benefits.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg11.jpg" alt="" class="card-img-top"></div>
+                <p><b>Exercise Helps Sleep</b></p>
+                <p> Regular physical activity improves sleep quality and duration, leading to better overall rest and
+                    recovery.</p>
+            </div>
+            <div class="right-card">
+                <div class="img-div"><img src="../static/image folder/fitnessfimg12.jpg" alt="" class="card-img-top"></div>
+                <p><b>Mind-Body Connection</b></p>
+                <p> Practices like yoga and Pilates promote the integration of physical movement and mental focus.</p>
+            </div>
+        </div>
+    </div>
+    <div class="last">
+        <center><img src="../static/image folder/fitnessflast.jpg" alt=""></center>
+    </div>
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+   
+
+      {% load static %}
+      <script src="{% static 'js folder/explore.js' %}"></script>
+    
+</body>
+
+</html>

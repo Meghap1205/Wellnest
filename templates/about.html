@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+
+    <title>About WELLnest</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/about-style.css' %}">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+   
+   
+
+
+    <div class="c1 container"><br>
+        <div class="row" style="z-index: 0;">
+            <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-2 col-xxl-2">
+                <div class="r1">
+                    <h6 class="pol1"><u>ABOUT US</u></h6>
+                    <p>
+                        <a style="text-decoration:none; color: #013827;" href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                    </p>
+                    <p>
+                        <a style="text-decoration:none; color: #013827;" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a style="text-decoration:none; color: #013827;" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                    <h6 class="pol1"><u>POLICIES</u></h6>
+                    <p>
+                        <a style="text-decoration:none; color: #013827;" href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a style="text-decoration:none; color: #013827;" href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                    <h6 class="pol1"><u>CONTACT</u></h6>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-7 col-md-8 col-lg-7 col-xl-8 col-xxl-8">
+                <h3 class="pol2">About WELLnest</h3>
+                <hr>
+                <p class="p1">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/image folder/aboutimg1.jpg" class="i1 img-fluid rounded-start" alt="img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><u><b>What We Do For Our User</b></u></h5>
+                                <p class="card-text">WELLnest provide valuable health information, tools for managing
+                                    your health, and support to those who seek information. You can trust that our
+                                    content is timely and credible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
+                <p class="p1" style="color: red;">
+                    <b>ALERT:</b> <i>WELLnest has been made aware of certain individuals contacting healthcare
+                        professionals claiming to represent WELLnest and requesting an interview regarding their
+                        practice. WELLnest does not solicit healthcare professionals for interviews by telephone or
+                        otherwise, and these individuals do not represent WELLnest. Please disregard any such
+                        solicitation.</i>
+                </p>
+                <p class="p1">
+                    You’re on a journey to health and wellness. And we’re right there with you. <br><br>
+
+                    How you feel affects every single day of your life, which is why you work so hard to get well and
+                    stay well. No matter your journey, we’re here to support, guide, and inspire you. <br><br>
+
+                    We cut through the confusion with straightforwa`rd, expert-reviewed, person-first experiences — all
+                    designed to help you make the best decisions for yourself and the people you love.
+                </p><br>
+                <img src="../static/image folder/aboutimg2.jpg" class="img-fluid" alt="img"
+                    style="border: 1px solid black; border-radius: 7px;"><br><br>
+                <h4 class="pol3"><u>We want to help you own your well-being.</u></h4><br>
+                <p class="p1">WELLnest covers all facets of physical and mental health openly and objectively because
+                    we’re here for the whole person — for your whole life. And because people come to us with unique
+                    challenges, we listen closely and put empathy first across our organization. In everything from our
+                    personal perspectives to our commitment to inclusivity, you’ll see that we feel with you.
+                    <br><br>
+                    We hope you tap into all of WELLnest resources — from our health and wellness library and
+                    newsletters to our apps, podcasts, and communities. <br><br>
+
+                    Thanks for being here,<br>
+                    The WELLnest Team
+                </p>
+                <h4 class="pol3"><u>Medical Affairs</u></h4>
+                <p class="p1">WELLnest Medical Affairs team ensures that WELLnest content, products, and
+                    services uphold the highest standards of medical integrity. Our dedicated team manages an extensive
+                    medical network of over 150 healthcare professionals providing medical review, expert POVs, and
+                    clinical guidance. WELLnest healthcare professionals help ensure that the information we publish
+                    is accurate, evidence-based, current, person-centric, and trustworthy.</p>
+            </div>
+            <div class="col-0 col-sm-5 col-md-4 col-lg-3 col-xl-2 col-xxl-2"><br>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><b>News</b></div>
+                    <div class="card-body">
+                        <h5 class="card-title"><u>Health risks of heavy drinking</u></h5>
+                        <p class="card-text">Potentially serious physical effects of alcohol abuse.</p>
+                    </div>
+                </div>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><b>Information</b></div>
+                    <div class="card-body">
+                        <h5 class="card-title"><u>How fast can Ovarian cancer can spread</u>?</h5>
+                        <p class="card-text">It may depend on cancer's location and grade.</p>
+                    </div>
+                </div>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><b>Dangereous</b></div>
+                    <div class="card-body">
+                        <h5 class="card-title"><u>Diabetes</u></h5>
+                        <p class="card-text">Dangers that can result from high blood sugar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                            
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a style="text-decoration:none; color: #013827;" href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

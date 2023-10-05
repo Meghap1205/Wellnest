@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <title>Women's Health</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/women-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+
+<body>
+
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Women's Health</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#exercise">Exercise</a></li>
+            <li><a href="#mental-health">Mental Health</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-10 col-lg-9 col-md-9 col-sm-12">
+                <main>
+                    <section id="home">
+                        <h2 style="font-weight: 700;"><i>Welcome to Women's Health</i></h2>
+                        <img src="../static/image folder/a1.jpeg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">At Women's Health, we prioritize the well-being of women. Our website provides valuable information and
+                            resources on nutrition, exercise, mental health, and more to support women in leading a healthy and
+                            fulfilling life.</p>
+                    </section>
+                    <section id="nutrition">
+                        <h2 style="font-weight: 700;">Nutrition</h2>
+                        <img style="width: 100%;" src="../static/image folder/a2.jpeg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">Proper nutrition is essential for women's health. Here are some key aspects of nutrition for women:</p>
+                        <ul style="font-size: 20px;">
+                            <li>The importance of a balanced diet that includes a variety of fruits, vegetables, whole grains, lean
+                                proteins, and healthy fats</li>
+                            <li>Specific nutrient needs for women, such as calcium, iron, folic acid, and omega-3 fatty acids</li>
+                            <li>Tips for managing weight, hormonal changes, and common nutrition-related concerns for women</li>
+                            <li>Healthy eating strategies for different life stages, including pregnancy, menopause, and
+                                postmenopause</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and tips for maintaining a healthy diet:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Ensure you consume a variety of colorful fruits and vegetables for essential vitamins, minerals,
+                                    and antioxidants.</li>
+                                <li>Incorporate lean proteins such as fish, poultry, beans, and tofu to meet your protein needs and
+                                    support muscle health.</li>
+                                <li>Choose whole grains like quinoa, brown rice, and whole wheat bread for sustained energy and
+                                    fiber.</li>
+                                <li>Include healthy fats from sources like avocados, nuts, seeds, and olive oil for heart health and
+                                    hormone balance.</li>
+                                <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+                                <li>Consult with a healthcare professional or registered dietitian for personalized nutrition
+                                    guidance based on your specific needs and goals.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('nutrition')">Read more</p>
+                    </section>
+                    <section id="exercise">
+                        <h2 style="font-weight: 700;">Exercise</h2>
+                        <img src="../static/image folder/a3.jpg" alt="img" class="img-fluid img-thumbnail">
+                        <p style="font-size: 20px;">Regular physical activity is crucial for women's health. Here are some benefits of exercise for women:
+                        </p>
+                        <ul style="font-size: 20px;">
+                            <li>Strengthening muscles and bones to support overall physical health</li>
+                            <li>Strengthening muscles and bones to support overall physical health</li>
+                            <li>Improving cardiovascular health and reducing the risk of heart disease</li>
+                            <li>Managing weight and promoting healthy body composition</li>
+                            <li>Enhancing flexibility, balance, and coordination</li>
+                            <li>Boosting mood and reducing the risk of mental health issues</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and ideas to incorporate exercise into your routine:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Engage in aerobic activities such as walking, jogging, swimming, or cycling to improve heart
+                                    health.</li>
+                                <li>Incorporate strength training exercises using weights, resistance bands, or bodyweight exercises
+                                    to build muscle strength and maintain bone density.</li>
+                                <li>Practice flexibility exercises such as yoga or stretching to enhance joint mobility and prevent
+                                    injuries.</li>
+                                <li>Include activities you enjoy, such as dancing, hiking, or group fitness classes, to make
+                                    exercise fun and sustainable.</li>
+                                <li>Aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of
+                                    vigorous-intensity aerobic activity per week, along with muscle-strengthening activities on two
+                                    or more days.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('exercise')">Read more</p>
+                    </section>
+                    <section id="mental-health">
+                        <h2 style="font-weight: 700;">Mental Health</h2>
+                        <p style="font-size: 20px;">Prioritizing mental health is crucial for women's overall well-being. Here are some key aspects of mental
+                            health for women:</p>
+                        <ul style="font-size: 20px;">
+                            <li>The importance of self-care, stress management, and maintaining a healthy work-life balance</li>
+                            <li>Addressing common mental health conditions such as anxiety, depression, and postpartum depression
+                            </li>
+                            <li>Building resilience, self-esteem, and positive body image</li>
+                            <li>The role of healthy relationships and social support in mental well-being</li>
+                            <li>Seeking professional help and accessing resources for mental health support</li>
+                        </ul>
+                        <div class="expandable-content">
+                            <p style="font-size: 20px;">Here are some additional resources and strategies to promote mental well-being:</p>
+                            <ul style="font-size: 20px;">
+                                <li>Practice self-care activities that you enjoy, such as engaging in hobbies, spending time in
+                                    nature, or practicing mindfulness and relaxation techniques.</li>
+                                <li>Manage stress through techniques like deep breathing exercises, regular physical activity, and
+                                    maintaining a balanced lifestyle.</li>
+                                <li>Seek support from friends, family, or support groups to share experiences and emotions.</li>
+                                <li>Develop healthy coping mechanisms to deal with challenges and setbacks.</li>
+                                <li>Prioritize sleep and establish a consistent sleep routine to support mental and physical health.
+                                </li>
+                                <li>Reach out to mental health professionals or helplines if you need assistance or guidance.</li>
+                            </ul>
+                        </div>
+                        <p class="read-more-link" onclick="toggleContent('mental-health')">Read more</p>
+                    </section>
+                    <section id="contact">
+                        <h2 style="font-weight: 700;">Contact Us</h2>
+                        <p  style="font-size: 20px;">If you have any questions or concerns regarding women's health, feel free to reach out to our team. We're
+                            here to support you!</p>
+                        <p  style="font-size: 20px;">Phone: 123-456-7890</p>
+                        <p  style="font-size: 20px;">Email: info@womenshealth.com</p>
+                    </section>
+                </main>
+            </div>
+            <div class="col-0 col-xl-2 col-lg-3 col-md-3 col-sm-0">
+                <div class="r1">
+                    <h6 class="pol1"><u>ABOUT US</u></h6>
+                    <p>
+                        <a href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                    <h6 class="pol1"><u>POLICIES</u></h6>
+                    <p>
+                        <a href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                    <h6 class="pol1"><u>CONTACT</u></h6>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        {% load static %}
+        <script src="{% static 'js folder/well_being.js' %}"></script>
+</body>
+
+</html>

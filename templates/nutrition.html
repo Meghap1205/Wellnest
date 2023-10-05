@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nutrition</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css folder/style-nutrition.css' %}">
+  
+</head>
+
+<body>
+  <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+    <div class="container">
+        <a class="navbar-brand"  href="{% url 'about' %}">
+            <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Workout
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                        <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Well Being
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                Health</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                >Weight-management</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                Health</a></li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'womens' %}">Women's health</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                            href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">View all...</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                        <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                    </li>
+                        
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+  <p class="title">nutrition</p>
+  <div class="big-container">
+    <div class="left-container">
+      <div class="box box2 ">
+        <center><img src="../static/image folder/nutritionfirst.jpg" alt="" height="38%" width="70%">
+          <br>
+          <p>Proper nutrition is essential for maintaining good health and overall well-being.</p>
+
+        </center>
+      </div>
+      <div class="box  boxn">
+        <ol>
+          <li><strong>Energy:</strong> Nutrition provides the energy required for various bodily activities, including
+            physical exercise, digestion, and even mental processes.</li>
+          <br>
+          <li><strong>Growth and Development:</strong> Nutrients play a crucial role in the growth and development of
+            children and adolescents. Adequate nutrition is necessary for optimal height, weight, and cognitive
+            development.</li>
+          <br>
+          <li><strong>Immune System:</strong> A well-balanced diet rich in vitamins, minerals, and antioxidants
+            strengthens the immune system, helping the body fight off infections and diseases.</li>
+          <br>
+          <li><strong>Heart Health:</strong> A healthy diet low in saturated fats and cholesterol helps maintain heart
+            health, reducing the risk of cardiovascular diseases.</li>
+          <br>
+          <li><strong>Weight Management:</strong> Proper nutrition, combined with regular physical activity, contributes
+            to maintaining a healthy weight and preventing obesity.</li>
+          <br>
+          <li><strong>Brain Function:</strong> Certain nutrients, such as omega-3 fatty acids and antioxidants, are
+            essential for brain health and cognitive function.</li>
+        </ol>
+      </div>
+
+      <div class="box box1">
+        <div class="bubbleimg">
+          <div class="card">
+            <img src="../static/image folder/nutritionf-letter.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/o-letter1 (1).png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/o-letter2.png">
+          </div>
+          <div class="card">
+            <img src="../static/image folder/d-letter.png">
+          </div>
+        </div>
+      </div>
+      <div class="box boxn ">
+        <p>Adopting a healthy eating pattern is essential for obtaining the right balance of nutrients. Here are some
+          dietary recommendations:</p>
+        <ul>
+          <li>Eat a variety of fruits and vegetables to ensure an adequate intake of vitamins, minerals, and dietary
+            fiber.</li>
+          <br>
+          <li>Include lean sources of protein, such as poultry, fish, legumes, and nuts, in your diet.</li>
+          <br>
+          <li>Choose whole grains over refined grains to obtain more fiber, vitamins, and minerals.</li>
+          <br>
+          <li>Limit the intake of saturated and trans fats, as they can increase the risk of heart disease.</li>
+          <br>
+          <li>Reduce the consumption of added sugars, sugary drinks, and processed foods.</li>
+          <br>
+          <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+
+        </ul>
+      </div>
+
+      <div class="box box5 ">
+        <div id="slides">
+          <input checked type="radio" name="slider" id="slide1" class="set" />
+          <input type="radio" name="slider" id="slide2" class="set" />
+          <input type="radio" name="slider" id="slide3" class="set" />
+          <input type="radio" name="slider" id="slide4" class="set" />
+
+          <div class="mask">
+            <div class="overflow">
+
+              <div class="slide">
+                <img src="../static/image folder/nutritionslide1.jpeg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/nutritionslide2.jpg"alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/nutritionslide3.jpg" alt="image" />
+              </div>
+              <div class="slide">
+                <img src="../static/image folder/nutritionslide4..jpeg" alt="image" />
+              </div>
+
+            </div>
+          </div>
+
+          <div id="controls" onclick="">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+          </div>
+          <center>which one will you choose?</center>
+        </div>
+      </div>
+      <div class="box boxn ">
+        <p>It's important to understand the specific nutrients and their functions in the body:</p>
+        <dl>
+          <center>
+            <div class="imghover">
+              <img src="../static/image folder/carbs.jpg" alt="...">
+            </div>
+          </center>
+          <br>
+          <hr><br>
+          <dt>Carbohydrates:</dt>
+          <dd>Carbohydrates are the body's primary source of energy. They provide fuel for physical activity, brain
+            function, and organ function. Whole grains, fruits, and vegetables are good sources of carbohydrates.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/protein.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Proteins:</dt>
+        <dd>Proteins are the building blocks of the body, essential for growth, repair, and maintenance of tissues. They
+          also play a role in the production of enzymes, hormones, and antibodies. Good sources of protein include lean
+          meats, poultry, fish, dairy products, legumes, and tofu.</dd>
+
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/fats.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Fats:</dt>
+        <dd>Fats are a concentrated source of energy and are necessary for the absorption of fat-soluble vitamins.
+          However, it's important to choose healthy fats, such as those found in nuts, seeds, avocados, and olive oil,
+          while limiting saturated and trans fats.</dd>
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/fruits.jpg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Vitamins:</dt>
+        <dd>Vitamins are essential for various bodily functions, including metabolism, immune function, and cell growth.
+          They can be obtained from a balanced diet that includes a variety of fruits, vegetables, whole grains, and
+          lean proteins.</dd>
+
+      </div>
+      <div class="box boxn ">
+        <center>
+          <div class="imghover">
+            <img src="../static/image folder/nutritionminerals.jpeg" alt="...">
+          </div>
+        </center>
+        <br>
+        <hr><br>
+        <dt>Minerals:</dt>
+        <dd>Minerals, such as calcium, iron, and potassium, are vital for maintaining proper body functions, including
+          bone health, oxygen transport, and fluid balance. Good sources of minerals include dairy products, leafy
+          greens, nuts, and seeds.</dd>
+        </dl>
+      </div>
+      <div class="box boxn ">
+        <p>Understanding and addressing specific nutritional needs throughout different stages of life is crucial:</p>
+        <ul>
+          <br>
+          <li>Infants and young children: Breast milk or formula provides essential nutrients for infants. As they start
+            eating solid foods, a variety of age-appropriate foods should be introduced to ensure proper growth and
+            development.</li>
+          <br>
+          <li>Adolescents: Proper nutrition during adolescence is essential for growth spurts, bone development, and
+            hormonal changes. Encouraging a balanced diet and healthy food choices is important.</li>
+          <br>
+          <li>Adults: Maintaining a balanced diet in adulthood helps support overall health, prevent chronic diseases,
+            and manage weight.</li>
+          <br>
+          <li>Pregnant and lactating women: The nutritional needs of pregnant and lactating women increase to support
+            their own health and the growth of their babies. Adequate intake of nutrients like folic acid, iron, and
+            calcium is crucial during this period.</li>
+        </ul>
+      </div>
+      <div class="box boxn ">
+        <p>In addition to a balanced diet, it's important to practice food safety measures:</p>
+        <ul>
+          <br>
+          <li>Wash hands thoroughly before handling food and after using the restroom.</li>
+          <br>
+          <li>Store and handle raw and cooked foods separately to prevent cross-contamination.</li>
+          <br>
+          <li>Cook foods thoroughly to kill harmful bacteria and pathogens.</li>
+          <br>
+          <li>Refrigerate perishable foods promptly to prevent bacterial growth.</li>
+          <br>
+          <li>Check expiration dates and discard expired or spoiled foods.</li>
+        </ul><br><br>
+        <p>Remember, nutrition is a lifelong process, and small changes in dietary habits can have a significant impact
+          on your health and well-being. Consulting a healthcare professional or registered dietitian can provide
+          personalized guidance to meet your nutritional needs.</p>
+
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/apple.png" alt="" class="card-img-top"></div>
+        <p><b>An apple a day keeps the doctor away.</b></p>
+        <p>Apples are packed with fiber, vitamins, and antioxidants that contribute to good health and help prevent
+          illness.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/choco.jpg" alt="" class="card-img-top"></div>
+        <p><b>The power of dark chocolate: indulge wisely.</b></p>
+        <p>" Dark chocolate with a high cocoa content is not only a delicious treat but also a source of antioxidants
+        </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/turmeric.jpg" alt="" class="card-img-top"></div>
+        <p><b>Spice up your life with turmeric.</b></p>
+        <p>Turmeric contains a compound called curcumin, known for its anti-inflammatory properties</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/nuts.jpg" alt="" class="card-img-top"></div>
+        <p><b>Go nuts for nuts!</b></p>
+        <p>Nuts packed with healthy fats, fiber, and various vitamins and minerals that can benefit heart health.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/hydration.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Hydration is key for radiant skin.</b></p>
+        <p> Drinking an adequate amount of water helps keep your skin hydrated, elastic, and glowing, contributing to a
+          healthy complexion</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/calcium.jpg" alt="" class="card-img-top"></div>
+        <p><b>Don't forget your calcium for strong bones.</b></p>
+        <p> Calcium-rich foods like dairy products, leafy greens, and fortified plant-based milk are essential for
+          maintaining strong bones.</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/oats.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Oats: the breakfast champion.</b></p>
+        <p>Oats are a nutritious whole grain that provides fiber, vitamins, and minerals</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/rainbow.jpg" alt="" class="card-img-top"></div>
+        <p><b>Rainbow plate, happy body</b></p>
+        <p>Including a variety of colorful fruits and vegetables in your meals</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/fish.jpg" alt="" class="card-img-top"></div>
+        <p><b>Fish is brain food.</b></p>
+        <p> Fatty fish like salmon, mackerel, and sardines are rich in omega-3 fatty acids, which are beneficial for
+          brain health</p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/nutritionsugar.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Sugar: sweet but not so sweet for you.</b></p>
+        <p>Excessive sugar intake can lead to weight gain, tooth decay, and increased risk of chronic diseases. </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/green-tea.jpg" alt="" class="card-img-top"></div>
+        <p><b>Sip smart with green tea.</b></p>
+        <p> Green tea is loaded with antioxidants and may have potential health benefits, including boosting metabolism
+        </p>
+      </div>
+      <div class="right-card">
+        <div class="img-div"><img src="../static/image folder/green-veg.jpeg" alt="" class="card-img-top"></div>
+        <p><b>Don't skip the greens.</b></p>
+        <p>Leafy green vegetables like spinach, kale, and broccoli are nutritional powerhouses.</p>
+      </div>
+    </div>
+  </div>
+  <div class="last">
+    <center><img src="../static/image folder/nutritionlast.jpg" alt=""></center>
+  </div>
+  <footer>
+    <div class="foot-1">
+        <div class="container"><br><br>
+            <div class="row">
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                            id="logo1" alt="img"></a>
+                    <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                        advice
+                        that's inclusive and rooted in medical expertise.</div><br>
+                        
+                    <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                            <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Policies</h3>
+                    <p>
+                        <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                    </p>
+                    <p>
+                        <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>About</h3>
+                    <p>
+                        <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                </div>
+                <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                            road,395007</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="foot-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                    <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                        reserved. Our
+                        website
+                        services,content,and products are for informational purpose only. Wellnest Media
+                        does not
+                        provide medical advices, diagnosis, or treatment.</div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item s1">
+                            <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item s1">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static 'js folder/explore.js' %}"></script>
+ 
+</body>
+
+</html>

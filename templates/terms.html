@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+    <title>Terms of Use</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css folder/term-style.css' %}">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #013827; z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand"  href="{% url 'about' %}">
+                <img src="{% static 'image folder/aboutlogo2.png' %}" alt="About Logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'arm-workout' %}">Arm-workout</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}">Home-workout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'six' %}">Six packs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'lose' %}">Lose weight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'fitnesscoach' %}">Fitness coach</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Well Being
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'children' %}">Children
+                                    Health</a></li>
+                            <li><a class="dropdown-item" href="{% url 'weight' %}"
+                                    >Weight-management</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'mens' %}" >Men's
+                                    Health</a></li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'womens' %}">Women's health</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                href="{% url 'pregnancy' %}"   >Pregenancy</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View all...</a></li>
+                        </ul>
+                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'nutrition' %}" >Nutrition</a></li>
+                            <li><a class="dropdown-item" href="{% url 'sleep' %}">Sleep</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mental-health' %}">Mental Health</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'fitness' %}">Fitness</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">View all...</a></li>
+                            </ul>
+                        </li>
+                            
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn1 btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="c1 container-fluid">
+        <div class="row">
+            <div class="col-1 col-xl-2 col-lg-3 col-md-3 col-sm-3"><br><br>
+                <div class="r1">
+                    <h6 class="pol1"><u>ABOUT US</u></h6>
+                    <p>
+                        <a href="{% url 'about' %}" >About <b>Well</b>nest</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'services' %}" >Health Services</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'accessibility' %}" >Accessibility</a>
+                    </p>
+                    <h6 class="pol1"><u>POLICIES</u></h6>
+                    <p>
+                        <a href="{% url 'privacy' %}">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'terms' %}">Terms of use</a>
+                    </p>
+                    <h6 class="pol1"><u>CONTACT</u></h6>
+                    <p>
+                        <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-11 col-xl-10 col-lg-9 col-md-9 col-sm-9"><br>
+                <h3 class="pol2">Terms and Conditions of Use</h3><hr><br>
+                <h4 class="pol3"><u>PLEASE READ THESE TERMS AND CONDITIONS OF USE CAREFULLY BEFORE USING THIS SITE.</u>
+                </h4><br>
+                <p class="p1">
+                    By using this site, you signify your assent to these Terms and Conditions. If you do not agree to
+                    all of these Terms and Conditions, do not use this site! <br>
+                    WELLnest LLC ("WELLnest") may revise and update these Terms and Conditions at any time. Your
+                    continued usage of the WELLnest website ("WELLnest Site," or the "Site,") will mean you accept those
+                    changes. <br><br>
+                </p>
+                <h4 class="pol3"><u>The Site Does Not Provide Medical Advice</u></h4><br>
+                <p class="p1">
+                    The contents of the WELLnest Site, such as text, graphics, images, and other materials created by
+                    WebMD or obtained from WELLnest licensors, and other materials contained on the WELLnest Site
+                    (collectively, "Content") are for informational purposes only. The Content is not intended to be a
+                    substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your
+                    physician or other qualified health provider with any questions you may have regarding a medical
+                    condition. Never disregard professional medical advice or delay in seeking it because of something
+                    you have read on the WELLnest Site! <br><br>
+                    If you think you may have a medical emergency, call your doctor or 911 immediately. WELLnest does
+                    not recommend or endorse any specific tests, physicians, products, procedures, opinions, or other
+                    information that may be mentioned on the Site. Reliance on any information provided by WELLnest,
+                    WELLnest employees, others appearing on the Site at the invitation of WebMD, or other visitors to
+                    the Site is solely at your own risk.
+                </p>
+                <h4 class="pol3"><u>Children's Privacy</u></h4>
+                <p class="p1">
+                    We are committed to protecting the privacy of children. You should be aware that this Site is not
+                    intended or designed to attract children under the age of 13. We do not collect personally
+                    identifiable information from any person we actually know is a child under the age of 13.
+                </p>
+                <h4 class="pol3"><u>Use of the Content</u></h4>
+                <p class="p1">
+                    The Content posted on this Site is protected by the copyright laws in the United States and in
+                    foreign countries. WebMD authorizes you to view or download a single copy of the Content solely for
+                    your personal, noncommercial use if you include the copyright notice located at the end of the
+                    material, for example: "©2023, WELlnest, LLC. All rights reserved" and other copyright and
+                    proprietary rights notices that are contained in the Content. Any special rules for the use of
+                    certain software and other items accessible on the WWELlnest Site may be included elsewhere within
+                    the Site and are incorporated into these Terms and Conditions by reference.<br><br>
+                    Title to the Content remains with WebMD or its licensors. Any use of the Content not expressly
+                    permitted by these Terms and Conditions is a breach of these Terms and Conditions and may violate
+                    copyright, trademark, and other laws. Content and other features are subject to change or
+                    termination without notice in the editorial discretion of WELlnest. All rights not expressly granted
+                    herein are reserved to WebMD and its licensors. Certain Content on this Site is licensed under U.S.
+                    Patent No. 6,585,516.
+                    <br><br>
+                    If you violate any of these Terms and Conditions, your permission to use the Content automatically
+                    terminates and you must immediately destroy any copies you have made of any portion of the Content.
+                </p>
+                <h4 class="pol3"><u>Passwords</u></h4>
+                <p class="p1">
+                    WELlnest has several tools that allow you to record and store information. You are responsible for
+                    taking all reasonable steps to ensure that no unauthorized person shall have access to your WELlnest
+                    passwords or accounts. It is your sole responsibility to: (1) control the dissemination and use of
+                    sign-in name, screen name and passwords; (2) authorize, monitor, and control access to and use of
+                    your WebMD account and password; (3) promptly inform WebMD if you believe your account or password
+                    has been compromised or if there is any other reason you need to deactivate a password. To send us
+                    an email, use the "Contact Us" links located at the bottom of every page of our site. You grant
+                    WELlnest and all other persons or entities involved in the operation of the Site the right to
+                    transmit, monitor, retrieve, store, and use your information in connection with the operation of the
+                    Site. WELLnest cannot and does not assume any responsibility or liability for any information you
+                    submit, or your or third parties' use or misuse of information transmitted or received using WebMD
+                    tools and services.
+                </p>
+                <h4 class="pol3"><u>User Content Guidelines</u></h4>
+                <p class="p1">
+                    If you use, or post User Content on, a Public Area such as blogs, or our Physician Directory, or
+                    post on any Social Media Platform, you are solely responsible for your own communications, the
+                    consequences of posting those communications, and your reliance on any communications found in the
+                    Public Areas or on the Social Media Platforms. WELLnest and its licensors are not responsible for the
+                    consequences of any communications in the Public Areas or on Social Media Platforms. In cases where
+                    you feel threatened or believe someone else is in danger, you should contact your local law
+                    enforcement agency immediately. If you think you may have a medical emergency, call your doctor or
+                    911 immediately. <br>
+                    In consideration of being allowed to use the Public Areas and Social Media Platforms, you agree that
+                    the following actions shall constitute a material breach of these Terms and Conditions:
+                <ol>
+                    <li class="ul">Using a Public Area or Social Media Platform for any purpose in violation of local,
+                        state, national, or international laws;</li>
+                    <li class="ul">Posting material that infringes on the intellectual property rights of others or on
+                        the privacy or publicity rights of others;</li>
+                    <li class="ul">Posting material that is unlawful, obscene, defamatory, threatening, harassing,
+                        abusive, slanderous, hateful, or embarrassing to any other person or entity as determined by
+                        WELLnest in its sole discretion;</li>
+                    <li class="ul">Posting advertisements or solicitations of business;</li>
+                    <li class="ul">After receiving a warning, continuing to disrupt the normal flow of dialogue, or
+                        posting comments that are not related to the topic being discussed (unless it is clear the
+                        discussion is free-form);</li>
+                    <li class="ul">Posting chain letters or pyramid schemes;</li>
+                    <li class="ul">Impersonating another person;</li>
+                    <li class="ul">Distributing viruses or other harmful computer code;</li>
+                    <li class="ul">Harvesting, scraping or otherwise collecting information about others, including
+                        email addresses, without their identification for posting or viewing comments;</li>
+                    <li class="ul">Allowing any other person or entity to use your identification for posting or viewing
+                        comments</li>
+                    <li class="ul">Posting the same note more than once or "spamming"; or</li>
+                    <li class="ul">Engaging in any other conduct that restricts or inhibits any other person from using
+                        or enjoying the Public Area, Social Media Platform or the Site, or which, in the judgment of
+                        WELLnest, exposes WELLnest or any of its customers or suppliers to any liability or detriment of
+                        any type.</li>
+                </ol>
+                <b>WELLnest or its licensors have no liability or responsibility to users of the WELLnest Site or any
+                    other person or entity for performance or nonperformance of the aforementioned activities.</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-1">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <a href="{% url 'about' %}"><img src="../static/image folder/logo1.png"
+                                id="logo1" alt="img"></a>
+                        <div class="foot">Filter out the noise and nurture your indbox with health and wellness
+                            advice
+                            that's inclusive and rooted in medical expertise.</div><br>
+                           
+                        <div class="foot f3">Your <a href="{% url 'privacy' %}">
+                                <u class="g1"><b>privacy</b></u></a> is important to us.</div>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Policies</h3>
+                        <p>
+                            <a class="g1"href="{% url 'privacy' %}">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'advertising' %}">Advertising Policy</a>
+                        </p>
+                        <p>
+                            <a class="g1"href="{% url 'terms' %}">Terms of use</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>About</h3>
+                        <p>
+                            <a class="g1" href="{% url 'contactUS' %}">Contact Us</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'about' %}" >About <b>WELL</b>nest</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'services' %}" >Health Services</a>
+                        </p>
+                        <p>
+                            <a class="g1" href="{% url 'accessibility' %}" >Accessibility</a>
+                        </p>
+                    </div>
+                    <div class="column col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-home mr-2"></i> <span class="foot">SVNIT,Surat,Dumas
+                                road,395007</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-2"></i> <span class="foot"><a href="mailto:wellnest111@gmail.com">wellnest111@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-2"></i> <span class="foot">+91 9554828612</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="foot-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><br>
+                        <div class="f1 text-center text-white">&copy 2023 Wellnest Media LLC. All rights
+                            reserved. Our
+                            website
+                            services,content,and products are for informational purpose only. Wellnest Media
+                            does not
+                            provide medical advices, diagnosis, or treatment.</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 f2 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item s1">
+                                <a href="https://www.facebook.com/profile.php?id=100027132822086" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.instagram.com/harshgupta.287/" class="btn-floating btn-sm text-white"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://twitter.com/HarshGu81321060" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://en.wikipedia.org/wiki/Google+" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item s1">
+                                <a href="https://www.linkedin.com/in/harsh-gupta-220722257" class="btn-floating btn-sm text-white"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
